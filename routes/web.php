@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home', 'App\Http\Controllers\PlacesController@showAll');
+
+Route::get('/home2', function () {
+    return view('home2.index');
+});

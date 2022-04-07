@@ -34,6 +34,8 @@
                     <div>
                         <p>Or</p>
                         <button id="guestBtn"><a href="/home">Enter as a Guest</a></button>
+                        <p></p>
+                        <button id="funciona"><a href="/home2">Enter</a></button>
                     </div>
                 </div>
 

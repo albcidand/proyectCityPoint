@@ -1,9 +1,106 @@
 body {
     background-color: var(--backgroundColor);
+}
+
+#wrapper {
+    padding: 10px;
+    width: 100%;
     display: flex;
-    flex-direction:column;
-    justify-content: center;
+    flex-direction: column;
+}
+
+/* ------------------- HEADER ------------------- */
+
+header {
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    position: fixed;
+}
+
+/* icono hamburguesa */
+
+#hamburger {
+    position: relative;
+    width: clamp(2rem, 5vw, 3rem);
+    height: clamp(2rem, 5vw, 3rem);
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+#hamburger .bar,
+#hamburger::after,
+#hamburger::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin: 6px 0px;
+    background-color: var(--darkMode);
+    transition: .4s;
+    border-radius: 6px;
+}
+
+#hamburger::before {
+    margin-top: 0;
+}
+
+#hamburger::after {
+    margin-bottom: 0;
+}
+
+#hamburger .bar {
+    margin: 0;
+}
+
+/* animación del icono hamburguesa */
+
+#hamburger.active::before {
+    transform: rotateZ(-45deg) translate(-5px, 5px);
+}
+
+#hamburger.active .bar {
+    opacity: 0;
+}
+
+#hamburger.active::after {
+    transform: rotateZ(45deg) translate(-9px, -9px);
+}
+
+#logo {
+    text-decoration: none;
+    color: var(--darkMode);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#logo span {
+    color: var(--primaryColor);
+}
+
+#userPic {
+    width: 30px;
+    height: 30px;
+}
+
+/* ------------------- MAIN CONTENT------------------- */
+
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 70px;
 }
 
 .card {
@@ -16,11 +113,64 @@ body {
     background-color: white;
 }
 
-.card > div {
+.card>div {
     padding: 6px;
 }
 
 .card img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+/* MAIN TITLE */
+
+#title {
+
+}
+
+/* FILTRO CATEGORÍAS */
+
+#categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* FILTRO CIUDADES */
+
+#cities {
+    display: flex;
+    gap: 20px;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+}
+
+#cities::-webkit-scrollbar {
+    display: none;
+}
+
+#cities > div:nth-child(1) {
+    background-image: url(/assets/sevilla.jpg);
+    background-size: cover;
+}
+#cities > div:nth-child(2) {
+    background-image: url(/assets/madrid.jpg);
+    background-size: cover;
+}
+#cities > div:nth-child(3) {
+    background-image: url(/assets/valencia.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#cities > div:nth-child(4) {
+    background-image: url(/assets/lisboa.jpg);
+    background-size: cover;
+}
+
+.city {
+    min-width: 50%;
+    height: 10em;
+    scroll-snap-align: start;
+    border-radius: 10px;
 }

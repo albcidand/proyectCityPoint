@@ -44,22 +44,24 @@
                     <div class="city">Sevilla</div>
                     <div class="city">Madrid</div>
                     <div class="city">Valencia</div>
-                    <div class="city">Lisboa</div>
+                    <div class="city">Lisbon</div>
                 </section>
     
                 <section id="random">
                 <h2>Random Places</h2>
-    
-                    @foreach($places as $place)
-                        <div class="card">
-                            <img src="{{$place -> place_img}}" alt="">
-                            <div>
-                                <h2>{{$place -> place_title}}</h2>
-                                <p><i class="uil uil-map-marker"></i><a href="https://goo.gl/maps/DPLZUp7RGxfpQ6qM6" target="_BLANK">{{$place -> place_city}}</a></p>
-                                <p>{{$place -> place_description}}</p>
+                    <div id="cardContainer">
+                        @foreach($randomPlaces as $place)
+                            <div class="card">
+                                <button class="fav_btn" value="{{$place -> place_id}}"><i class="uil uil-heart-alt"></i></button>
+                                <img src="{{$place -> place_img}}" alt="">
+                                <div>
+                                    <h2>{{$place -> place_title}}</h2>
+                                    <p><i class="uil uil-map-marker"></i><a href="{{$place -> place_location}}" target="_BLANK">{{$place -> place_city}}</a></p>
+                                    <p>{{$place -> place_description}}</p>
+                                </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
     
                 </section>
     
@@ -69,6 +71,20 @@
     
             <aside id="favorites">
                 <h2>Favorite Places</h2>
+
+                <div id="cardContainer" class="fav_places">
+                        @foreach($favoritePlaces as $favorite)
+                            <div class="card">
+                            <button class="fav_btn"><i class="uil uil-heart-alt"></i></button>
+                                <img src="{{$favorite -> place_img}}" alt="">
+                                <div>
+                                    <h2>{{$favorite -> place_title}}</h2>
+                                    <p><i class="uil uil-map-marker"></i><a href="{{$favorite -> place_location}}" target="_BLANK">{{$favorite -> place_city}}</a></p>
+                                    <p>{{$favorite -> place_description}}</p>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
             </aside>
         </div>
 
@@ -77,5 +93,39 @@
         
 
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('.fav_btn').click(function(){
+            $(this).toggleClass('btn_active'),
+            $(this).children('i').toggleClass('fav_active')
+
+            $.ajax({
+                method: 'GET',
+                dataType: 'json',
+                url: '<?php echo route('add_fav_place')?>',
+                data: {
+                    '_token': '<?php echo csrf_token() ?>',
+                    'place_id': $(this).val()
+                },
+                success: function(response) {
+                    console.log(response);
+                    $('.fav_places').html('');
+                    response.forEach(element => {
+                        $('.fav_places').append(
+                            '<div class="card">'+
+                            '<button class="fav_btn"><i class="uil uil-heart-alt"></i></button>'+
+                                '<img src="'+ element.place_img +'" alt="">'+
+                                '<div>'+
+                                    '<h2>'+ element.place_title +'</h2>'+
+                                    '<p><i class="uil uil-map-marker"></i><a href="'+ element.place_location +'" target="_BLANK">'+ element.place_city +'</a></p>'+
+                                    '<p>'+ element.place_description +'</p>'+
+                                '</div>'+
+                            '</div>'
+                        )
+                    })
+                }
+            })
+        });
+    </script>
 </body>
 </html>

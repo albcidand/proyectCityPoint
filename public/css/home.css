@@ -3,7 +3,6 @@ body {
 }
 
 #wrapper {
-    padding: 10px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -12,12 +11,15 @@ body {
 /* ------------------- HEADER ------------------- */
 
 header {
-    width: calc(100% - 20px);
+    width: 100%;
+    padding: 0 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    background-color: var(--backgroundColor);
+    z-index: 99;
 }
 
 /* icono hamburguesa */
@@ -100,17 +102,47 @@ main {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-top: 70px;
+    margin: 70px 10px 0 10px;
 }
 
 .card {
-    width: 15em;
-    height: fit-content;
+    width: 13em;
     display: flex;
     flex-direction: column;
     border: 1px solid white;
     border-radius: 10px;
     background-color: white;
+    position: relative;
+}
+
+.fav_btn {
+    border: none;
+    background-color: var(--backgroundColor);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uil {
+    color: var(--primaryColor);
+}
+
+.uil-heart-alt {
+    font-size: 17px;
+}
+
+.fav_active {
+    color: var(--backgroundColor);
+}
+
+.btn_active {
+    background-color: var(--fav_color);
 }
 
 .card>div {
@@ -118,8 +150,11 @@ main {
 }
 
 .card img {
+    height: 10em;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    object-position: center;
+    object-fit: cover;
 }
 
 /* MAIN TITLE */
@@ -173,4 +208,18 @@ main {
     height: 10em;
     scroll-snap-align: start;
     border-radius: 10px;
+}
+
+#random {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#cardContainer {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(auto, 10em);
+    grid-template-columns: repeat(2, 13em);
+    gap: 10px 10px;
 }

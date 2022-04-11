@@ -19,6 +19,4 @@ Route::get('/', function () {
 
 Route::get('/home', 'App\Http\Controllers\PlacesController@showAll');
 
-Route::get('/home2', function () {
-    return view('home2.index');
-});
+Route::get('/add_fav', 'App\Http\Controllers\FavController@addFav')->name('add_fav_place');

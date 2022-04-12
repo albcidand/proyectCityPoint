@@ -51,6 +51,7 @@
                 <h2>Random Places</h2>
                     <div id="cardContainer">
                         @foreach($randomPlaces as $place)
+                    
                             <div class="card">
                                 <button class="fav_btn" value="{{$place -> place_id}}"><i class="uil uil-heart-alt"></i></button>
                                 <img src="{{$place -> place_img}}" alt="">
@@ -60,6 +61,7 @@
                                     <p>{{$place -> place_description}}</p>
                                 </div>
                             </div>
+
                         @endforeach
                     </div>
     
@@ -75,7 +77,7 @@
                 <div id="cardContainer" class="fav_places">
                         @foreach($favoritePlaces as $favorite)
                             <div class="card">
-                            <button class="fav_btn"><i class="uil uil-heart-alt"></i></button>
+                            <button class="fav_btn btn_active" value="{{$favorite -> place_id}}"><i class="uil uil-heart-alt fav_active"></i></button>
                                 <img src="{{$favorite -> place_img}}" alt="">
                                 <div>
                                     <h2>{{$favorite -> place_title}}</h2>
@@ -95,10 +97,16 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        $('.fav_btn').click(function(){
-            $(this).toggleClass('btn_active'),
-            $(this).children('i').toggleClass('fav_active')
+        var clicked_btn
 
+        $(document).on('click', '.fav_btn', function (){
+            let id = $(this).val()
+            clicked_btn = $(this)
+            
+            $(this).addClass('btn_active')
+            $(this).children('i').addClass('fav_active')
+                        
+            
             $.ajax({
                 method: 'GET',
                 dataType: 'json',
@@ -108,12 +116,69 @@
                     'place_id': $(this).val()
                 },
                 success: function(response) {
-                    console.log(response);
+
+                    if(response == 1){
+                        
+                        $('#content').append(
+                            '<div id="alert">'+
+                                '<div>'+
+                                    '<p>This place is already in your favorites list, do you want to remove it from the list?</p>'+
+                                    '<div>'+
+                                        '<button id="btn_confirm_alert" value="'+ id +'">Yes</button>'+
+                                        '<button id="btn_cancel_alert">No</button>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</div>'
+                        )
+                        $('body').css('overflow', 'hidden');
+                    }else {
+
+                        $('.fav_places').html('');
+                        response.forEach(element => {
+                            $('.fav_places').append(
+                                '<div class="card">'+
+                                '<button class="fav_btn btn_active" value="'+ element.place_id +'"><i class="uil uil-heart-alt fav_active"></i></button>'+
+                                    '<img src="'+ element.place_img +'" alt="">'+
+                                    '<div>'+
+                                        '<h2>'+ element.place_title +'</h2>'+
+                                        '<p><i class="uil uil-map-marker"></i><a href="'+ element.place_location +'" target="_BLANK">'+ element.place_city +'</a></p>'+
+                                        '<p>'+ element.place_description +'</p>'+
+                                    '</div>'+
+                                '</div>'
+                            )
+                        })
+                        
+                    }
+                }
+            })
+        });
+
+        $(document).on('click', '#btn_cancel_alert', function() {
+            $('#alert').remove();
+            $('body').css('overflow', 'auto');
+        })
+
+        $(document).on('click', '#btn_confirm_alert', function() {
+
+            clicked_btn.removeClass('btn_active')
+            clicked_btn.children('i').removeClass('fav_active')
+
+            $.ajax({
+                method: 'GET',
+                dataType: 'json',
+                url: '<?php echo route('delete_fav_place')?>',
+                data: {
+                    '_token': '<?php echo csrf_token() ?>',
+                    'place_id': $('#btn_confirm_alert').val()
+                },
+                success: function(response) {
+
+
                     $('.fav_places').html('');
                     response.forEach(element => {
                         $('.fav_places').append(
                             '<div class="card">'+
-                            '<button class="fav_btn"><i class="uil uil-heart-alt"></i></button>'+
+                            '<button class="fav_btn btn_active" value="'+ element.place_id +'"><i class="uil uil-heart-alt fav_active"></i></button>'+
                                 '<img src="'+ element.place_img +'" alt="">'+
                                 '<div>'+
                                     '<h2>'+ element.place_title +'</h2>'+
@@ -123,9 +188,14 @@
                             '</div>'
                         )
                     })
+
                 }
             })
-        });
+
+            $('#alert').remove();
+            $('body').css('overflow', 'auto');
+            
+        })
     </script>
 </body>
 </html>

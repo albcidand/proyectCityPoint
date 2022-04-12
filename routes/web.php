@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::get('/home', 'App\Http\Controllers\PlacesController@showAll');
 
 Route::get('/add_fav', 'App\Http\Controllers\FavController@addFav')->name('add_fav_place');
+
+Route::get('/delete_fav', 'App\Http\Controllers\DeleteController@deleteFav')->name('delete_fav_place');

@@ -157,6 +157,39 @@ main {
     object-fit: cover;
 }
 
+/* ALERT FAVORITES */
+
+#alert {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    top: 0;
+    z-index: 2000;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#alert > div {
+    background-color: var(--secondaryTextColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#alert > div > div {
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+#alert > div > div > button{
+
+}
+
 /* MAIN TITLE */
 
 #title {
@@ -222,4 +255,13 @@ main {
     grid-template-rows: repeat(auto, 10em);
     grid-template-columns: repeat(2, 13em);
     gap: 10px 10px;
+}
+
+/* ------------------- ASIDE CONTENT------------------- */
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0px 10px 0 10px;
 }

@@ -113,6 +113,7 @@ main {
     border-radius: 10px;
     background-color: white;
     position: relative;
+    transition: all .5s ease;
 }
 
 .fav_btn {
@@ -168,7 +169,8 @@ main {
     position:fixed;
     top: 0;
     z-index: 2000;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
 }
 
 #alert > div {

@@ -130,7 +130,7 @@
                                 '</div>'+
                             '</div>'
                         )
-                        $('body').css('overflow', 'hidden');
+                        
                     }else {
 
                         $('.fav_places').html('');
@@ -145,7 +145,9 @@
                                         '<p>'+ element.place_description +'</p>'+
                                     '</div>'+
                                 '</div>'
-                            )
+                            );
+
+                            $('.card').eq(4).hide().fadeIn();
                         })
                         
                     }
@@ -193,7 +195,6 @@
             })
 
             $('#alert').remove();
-            $('body').css('overflow', 'auto');
             
         })
     </script>

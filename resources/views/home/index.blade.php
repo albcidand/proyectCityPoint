@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/commonStyles.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
     <div id="wrapper">
@@ -34,10 +35,10 @@
                 </section>
     
                 <section id="categories">
-                    <button id="categoriesMonument">Monument</button>
-                    <button id="categoriesNature">Nature</button>
-                    <button id="categoriesFood">Food</button>
-                    <button id="categoriesSecret">Secret</button>
+                    <button id="categoriesMonument"><a href="/monuments">Monument</a></button>
+                    <button id="categoriesNature"><a href="/nature">Nature</a></button>
+                    <button id="categoriesFood"><a href="/food">Food</a></button>
+                    <button id="categoriesSecret"><a href="/secret">Secret</a></button>
                 </section>
     
                 <section id="cities">
@@ -90,7 +91,9 @@
             </aside>
         </div>
 
-        <footer></footer>
+        <footer>
+            <p>Coded by <span>Alberto Cid</span>| <i class="far fa-copyright"></i> 2022 All rights reserved</p>
+        </footer>
 
         
 

@@ -29,8 +29,13 @@
             <main>
 
             <section id="title">
-                    <h2>NATURE PLACES</h2>
+
+                <div>
+                    <h2>Nature Places</h2>
+                    <a href="/home"><i class="uil uil-arrow-left"></i> Go Back</a>
+                </div>
                     <p>A selection of nature related places from cities all around the world</p>
+
             </section>
              
             <section id="places">

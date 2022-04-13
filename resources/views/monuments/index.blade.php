@@ -29,8 +29,13 @@
             <main>
 
             <section id="title">
-                    <h2>MONUMENTS</h2>
-                    <p>A selection of monuments from cities all around the world</p>
+
+                <div>
+                    <h2>Monuments</h2>
+                    <a href="/home"><i class="uil uil-arrow-left"></i> Go Back</a>
+                </div>
+                <p>A selection of monuments from cities all around the world</p>
+
             </section>
              
             <section id="places">

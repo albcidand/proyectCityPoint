@@ -117,6 +117,18 @@ main {
     margin: 70px 10px 0 10px;
 }
 
+#title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#title div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #places {
     display: grid;
     justify-content: center;

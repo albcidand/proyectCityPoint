@@ -29,8 +29,13 @@
             <main>
 
             <section id="title">
-                    <h2>SECRET PLACES</h2>
-                    <p>A selection of secret places from cities all around the world</p>
+
+                <div>
+                    <h2>Secret Places</h2>
+                    <a href="/home"><i class="uil uil-arrow-left"></i> Go Back</a>
+                </div>
+                <p>A selection of secret places from cities all around the world</p>
+
             </section>
              
             <section id="places">

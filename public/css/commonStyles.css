@@ -129,6 +129,19 @@ main {
     align-items: center;
 }
 
+#title div a {
+    padding: 10px 10px;
+}
+
+#title div a i:before{
+    transition: all .3s ease;
+}
+
+#title div a:hover i:before {
+    transform: translateX(-3px);
+    transition: all .3s ease;
+}
+
 #places {
     display: grid;
     justify-content: center;

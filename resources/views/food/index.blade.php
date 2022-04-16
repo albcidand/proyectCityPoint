@@ -60,5 +60,11 @@
             <p>Coded by <span>Alberto Cid</span>| <i class="far fa-copyright"></i> 2022 All rights reserved</p>
         </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="filter.js"></script>
+    <script>
+        var url_global = '{{url("/")}}';
+        var token = '{{csrf_token()}}';
+    </script>
 </body>
 </html>

@@ -129,12 +129,59 @@ main {
     align-items: center;
 }
 
+#title div a {
+    padding: 10px 10px;
+}
+
+#title div a i:before{
+    transition: all .3s ease;
+}
+
+#title div a:hover i:before {
+    transform: translateX(-3px);
+    transition: all .3s ease;
+}
+
 #places {
     display: grid;
     justify-content: center;
     grid-template-rows: repeat(auto, 10em);
     grid-template-columns: repeat(2, 13em);
     gap: 10px 10px;
+}
+
+/* ALERT FAVORITES */
+
+#alert {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    top: 0;
+    z-index: 2000;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+}
+
+#alert > div {
+    background-color: var(--secondaryTextColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#alert > div > div {
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+#alert > div > div > button{
+
 }
 
 /* CARDS STYLE */

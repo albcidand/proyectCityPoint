@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/commonStyles.css">
+    <link rel="stylesheet" href="css/citiesFilter.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
@@ -28,25 +29,33 @@
 
             <main>
 
+                <div id="hero_img_lisbon"></div>
             <section id="title">
 
                 <div>
-                    <h2>Nature Places</h2>
+                    <h2>Lisbon</h2>
                     <a href="/home"><i class="uil uil-arrow-left"></i> Go Back</a>
                 </div>
-                    <p>A selection of nature related places from cities all around the world</p>
+                <p>Discover places in Lisbon</p>
 
+            </section>
+
+            <section id="categories">
+                <button class="categories_btn" id="categoriesMonument" value="monument">Monument</button>
+                <button class="categories_btn" id="categoriesNature" value="nature">Nature</button>
+                <button class="categories_btn" id="categoriesFood" value="food">Food</button>
+                <button class="categories_btn" id="categoriesSecret" value="secret">Secret</button>
             </section>
              
             <section id="places">
-                @foreach($nature as $nature_place)
+                @foreach($lisbonPlaces as $place)
                             <div class="card">
-                                <button class="fav_btn" value="{{$nature_place -> place_id}}"><i class="uil uil-heart-alt"></i></button>
-                                <img src="{{$nature_place -> place_img}}" alt="">
+                                <button class="fav_btn" value="{{$place -> place_id}}"><i class="uil uil-heart-alt"></i></button>
+                                <img src="{{$place -> place_img}}" alt="">
                                 <div>
-                                    <h2>{{$nature_place -> place_title}}</h2>
-                                    <p><i class="uil uil-map-marker"></i><a href="{{$nature_place -> place_location}}" target="_BLANK">{{$nature_place -> place_city}}</a></p>
-                                    <p>{{$nature_place -> place_description}}</p>
+                                    <h2>{{$place -> place_title}}</h2>
+                                    <p><i class="uil uil-map-marker"></i><a href="{{$place -> place_location}}" target="_BLANK">{{$place -> place_city}}</a></p>
+                                    <p>{{$place -> place_description}}</p>
                                 </div>
                             </div>
                 @endforeach
@@ -61,10 +70,11 @@
         </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="favorites.js"></script>
     <script>
         var url_global = '{{url("/")}}';
         var token = '{{csrf_token()}}';
     </script>
+    <script src="lisbonFilter.js"></script>
+    <script src="favorites.js"></script>
 </body>
 </html>

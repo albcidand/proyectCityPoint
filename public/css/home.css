@@ -34,20 +34,20 @@ body {
     display: none;
 }
 
-.city:nth-child(1) {
+#cities > div:nth-child(1) {
     background-image: url(/assets/sevilla.jpg);
     background-size: cover;
 }
-.city:nth-child(2) {
+#cities > div:nth-child(2) {
     background-image: url(/assets/madrid.jpg);
     background-size: cover;
 }
-.city:nth-child(3) {
+#cities > div:nth-child(3) {
     background-image: url(/assets/valencia.jpg);
     background-position: center;
     background-size: cover;
 }
-.city:nth-child(4) {
+#cities > div:nth-child(4) {
     background-image: url(/assets/lisboa.jpg);
     background-size: cover;
 }

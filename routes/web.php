@@ -13,34 +13,41 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*  landing route */
+/*  ruta para la landing */
 
 Route::get('/', function () {
     return view('landing.index');
 });
 
-/* home route */
+/* ruta para la home */
 
 Route::get('/home', 'App\Http\Controllers\PlacesController@showAll');
 
-/* add favorite route */
+/* ruta para añadir favoritos */
 
 Route::get('/add_fav', 'App\Http\Controllers\FavController@addFav')->name('add_fav_place');
 
-/* delete favorite route */
+/* ruta para borrar favoritos */
 
 Route::get('/delete_fav', 'App\Http\Controllers\DeleteController@deleteFav')->name('delete_fav_place');
 
-/* filter route */
+/* rutas para los filtros de categorías de la home */
 
 Route::get('/monuments', 'App\Http\Controllers\CategoriesController@showMonuments');
 Route::get('/nature', 'App\Http\Controllers\CategoriesController@showNature');
 Route::get('/food', 'App\Http\Controllers\CategoriesController@showFood');
 Route::get('/secret', 'App\Http\Controllers\CategoriesController@showSecret');
 
-/* cities filter */
+/* rutas para el filtro de ciudad de la home */
 
-Route::get('/sevilla', 'App\Http\Controllers\SevillaController@showAll');
-Route::get('/madrid', 'App\Http\Controllers\MadridController@showAll');
-Route::get('/valencia', 'App\Http\Controllers\ValenciaController@showAll');
-Route::get('/lisbon', 'App\Http\Controllers\LisbonController@showAll');
+Route::get('/sevilla', 'App\Http\Controllers\CityController@showSevilla');
+Route::get('/madrid', 'App\Http\Controllers\CityController@showMadrid');
+Route::get('/valencia', 'App\Http\Controllers\CityController@showValencia');
+Route::get('/lisbon', 'App\Http\Controllers\CityController@showLisbon');
+
+/* rutas para los filtros de categorías de cada ciudad */
+
+Route::get('/lisbon_category', 'App\Http\Controllers\CityController@showCategoryLisbon');
+Route::get('/sevilla_category', 'App\Http\Controllers\CityController@showCategorySevilla');
+Route::get('/valencia_category', 'App\Http\Controllers\CityController@showCategoryValencia');
+Route::get('/madrid_category', 'App\Http\Controllers\CityController@showCategoryMadrid');

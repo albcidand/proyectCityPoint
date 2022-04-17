@@ -29,3 +29,8 @@
     background-size: cover;
     background-position: center;
 }
+
+#categories {
+    display: flex;
+    justify-content: space-between;
+}

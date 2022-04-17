@@ -39,6 +39,13 @@
                 <p>Discover places in Madrid</p>
 
             </section>
+
+            <section id="categories">
+                <button class="categories_btn" id="categoriesMonument" value="monument">Monument</button>
+                <button class="categories_btn" id="categoriesNature" value="nature">Nature</button>
+                <button class="categories_btn" id="categoriesFood" value="food">Food</button>
+                <button class="categories_btn" id="categoriesSecret" value="secret">Secret</button>
+            </section>
              
             <section id="places">
                 @foreach($madridPlaces as $place)
@@ -63,7 +70,8 @@
         </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src=""></script>
+    <script src="madridFilter.js"></script>
+    <script src="favorites.js"></script>
     <script>
         var url_global = '{{url("/")}}';
         var token = '{{csrf_token()}}';

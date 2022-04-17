@@ -61,7 +61,7 @@
         </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="filter.js"></script>
+    <script src="favorites.js"></script>
     <script>
         var url_global = '{{url("/")}}';
         var token = '{{csrf_token()}}';

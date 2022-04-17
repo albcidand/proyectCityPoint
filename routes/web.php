@@ -37,3 +37,10 @@ Route::get('/monuments', 'App\Http\Controllers\CategoriesController@showMonument
 Route::get('/nature', 'App\Http\Controllers\CategoriesController@showNature');
 Route::get('/food', 'App\Http\Controllers\CategoriesController@showFood');
 Route::get('/secret', 'App\Http\Controllers\CategoriesController@showSecret');
+
+/* cities filter */
+
+Route::get('/sevilla', 'App\Http\Controllers\SevillaController@showAll');
+Route::get('/madrid', 'App\Http\Controllers\MadridController@showAll');
+Route::get('/valencia', 'App\Http\Controllers\ValenciaController@showAll');
+Route::get('/lisbon', 'App\Http\Controllers\LisbonController@showAll');

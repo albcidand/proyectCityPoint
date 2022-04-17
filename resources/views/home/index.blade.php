@@ -42,10 +42,10 @@
                 </section>
     
                 <section id="cities">
-                    <div class="city">Sevilla</div>
-                    <div class="city">Madrid</div>
-                    <div class="city">Valencia</div>
-                    <div class="city">Lisbon</div>
+                    <a class="city" href="/sevilla"></a>
+                    <a class="city" href="/madrid"></a>
+                    <a class="city" href="/valencia"></a>
+                    <a class="city" href="/lisbon"></a>
                 </section>
     
                 <section id="random">

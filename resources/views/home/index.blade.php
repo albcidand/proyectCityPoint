@@ -42,17 +42,17 @@
                 </section>
     
                 <section id="cities">
-                    <a class="city" href="/sevilla"></a>
-                    <a class="city" href="/madrid"></a>
-                    <a class="city" href="/valencia"></a>
-                    <a class="city" href="/lisbon"></a>
+                    <a class="city" href="/sevilla"><p>Sevilla</p></a>
+                    <a class="city" href="/madrid"><p>Madrid</p></a>
+                    <a class="city" href="/valencia"><p>Valencia</p></a>
+                    <a class="city" href="/lisbon"><p>Lisbon</p></a>
                 </section>
     
                 <section id="random">
                 <h2>Random Places</h2>
                     <div id="cardContainer">
                         @foreach($randomPlaces as $place)
-                    
+                        
                             <div class="card">
                                 <button class="fav_btn" value="{{$place -> place_id}}"><i class="uil uil-heart-alt"></i></button>
                                 <img src="{{$place -> place_img}}" alt="">
@@ -87,7 +87,10 @@
                                 </div>
                             </div>
                         @endforeach
-                    </div>
+                </div>
+
+                <div id="seeMoreFavBtn"><a href="">See more</a></div>
+
             </aside>
         </div>
 

@@ -51,3 +51,7 @@ Route::get('/lisbon_category', 'App\Http\Controllers\CityController@showCategory
 Route::get('/sevilla_category', 'App\Http\Controllers\CityController@showCategorySevilla');
 Route::get('/valencia_category', 'App\Http\Controllers\CityController@showCategoryValencia');
 Route::get('/madrid_category', 'App\Http\Controllers\CityController@showCategoryMadrid');
+
+/* ruta para la página de favoritos */
+
+Route::get('/favorites', 'App\Http\Controllers\FavoriteListController@showAllFavorites');

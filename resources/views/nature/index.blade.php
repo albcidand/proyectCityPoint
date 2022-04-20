@@ -41,7 +41,7 @@
             <section id="places">
                 @foreach($nature as $nature_place)
                             <div class="card">
-                                <button class="fav_btn" value="{{$nature_place -> place_id}}"><i class="uil uil-heart-alt"></i></button>
+                                <button class="fav_btn" value="{{$nature_place -> place_id}}"><i class="uil uil-heart"></i></button>
                                 <img src="{{$nature_place -> place_img}}" alt="">
                                 <div>
                                     <h2>{{$nature_place -> place_title}}</h2>

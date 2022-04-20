@@ -54,7 +54,7 @@
                         @foreach($randomPlaces as $place)
                         
                             <div class="card">
-                                <button class="fav_btn" value="{{$place -> place_id}}"><i class="uil uil-heart-alt"></i></button>
+                                <button class="fav_btn" value="{{$place -> place_id}}"><i class="uil uil-heart"></i></button>
                                 <img src="{{$place -> place_img}}" alt="">
                                 <div>
                                     <h2>{{$place -> place_title}}</h2>
@@ -79,7 +79,7 @@
                 <div id="cardContainer" class="fav_places">
                         @foreach($favoritePlaces as $favorite)
                             <div class="card">
-                                <button class="fav_btn btn_active" value="{{$favorite -> place_id}}"><i class="uil uil-heart-alt fav_active"></i></button>
+                                <button class="fav_btn btn_active" value="{{$favorite -> place_id}}"><i class="uil uil-heart fav_active"></i></button>
                                 <img src="{{$favorite -> place_img}}" alt="">
                                 <div>
                                     <h2>{{$favorite -> place_title}}</h2>

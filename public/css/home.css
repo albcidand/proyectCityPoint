@@ -99,7 +99,7 @@ body {
     display: grid;
     justify-content: center;
     grid-auto-rows: minmax(20em, auto);
-    grid-template-columns: repeat(2, 13em);
+    grid-template-columns: repeat(2, 12em);
     gap: 10px 10px;
 }
 
@@ -109,7 +109,7 @@ aside {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin: 0px 10px 0 10px;
+    margin: 0px 20px 0 20px;
 }
 
 #seeMoreFavBtn {

@@ -1,16 +1,17 @@
 $(document).on('click', '.card', function () {
-    console.log($(this).children('p').text());
+
     $('#content').append(
         '<div id="infoCardContainer">' +
 
         '<div id="infoCard">' +
-        '<button class="fav_btn" value="' + $(this).children('button').val() + '"><i class="uil uil-heart-alt"></i></button>' +
+        '<button class="fav_btn" value="' + $(this).children('button').val() + '"><i class="uil uil-heart"></i></button>' +
+        '<button class="closeCard_btn"><i class="uil uil-arrow-left"></i></button>' +
         '<div id="infoCardImg"><img src="' + $(this).children('img').attr('src') + '" alt=""></div>' +
         '<div id="infoCardData">' +
         '<div id="infoCardTitle">' +
         '<h2>' + $(this).children('div').children('h2').text() + '</h2>' +
-        '</div>' +
-        '<div id="infoCardLocation">' +
+
+
         '<p><i class="uil uil-map-marker"></i>' + $(this).children('div').children('p:nth-child(2)').text() + '</p>' +
         '</div>' +
         '<div id="infoCardDescription">' +
@@ -25,6 +26,14 @@ $(document).on('click', '.card', function () {
 
         '</div>'
     )
+    $('#infoCardContainer').hide().fadeIn(300);
+    $('body').css('overflow', 'hidden')
 
+})
 
+$(document).on('click', '.closeCard_btn', function () {
+    $('#infoCardContainer').fadeOut(300, function () {
+        $('#infoCardContainer').remove()
+        $('body').css('overflow', 'auto')
+    });
 })

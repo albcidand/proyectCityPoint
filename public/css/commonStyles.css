@@ -7,6 +7,8 @@
     --fav_color: #ff0054;
     --darkMode: #202020;
     --fontSize: 14px;
+    --boxShadow: 0.3em 0.3em 0.7em #00000015;
+    --btnBoxShadow: 1px -1px 15px #14141444;
 }
 
 body {
@@ -114,7 +116,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin: 48px 10px 0 10px;
+    margin: 48px 20px 0 20px;
 }
 
 #title {
@@ -186,14 +188,14 @@ main {
 /* CARDS STYLE */
 
 .card {
-    width: 13em;
+    width: 12em;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     background-color: white;
     position: relative;
     transition: all .5s ease;
-    box-shadow: 0.3em 0.3em 0.7em #00000015;
+    box-shadow: var(--boxShadow);
     transition: outline 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     outline: rgba(250, 250, 250, 0) 2px solid;
 }
@@ -202,7 +204,8 @@ main {
     outline: var(--primaryColor) 2px solid;
 }
 
-.fav_btn {
+.fav_btn,
+.closeCard_btn {
     border: none;
     background-color: var(--backgroundColor);
     border-radius: 50%;
@@ -214,14 +217,27 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 1px -1px 15px #1414147c;
+}
+
+.closeCard_btn {
+    right: none;
+    left: 10px;
 }
 
 .uil {
     color: var(--primaryColor);
 }
 
-.uil-heart-alt {
-    font-size: 17px;
+.uil-heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.uil-map-marker {
+    font-size: 19px;
 }
 
 .fav_active {
@@ -271,8 +287,35 @@ main {
     background-color: white;
 }
 
+#infoCard button {
+    z-index: 2000;
+}
+
+#infoCard .uil-arrow-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
 #infoCard>div {
     height: 50%;
+}
+
+#infoCardImg {
+    position: relative;
+    z-index: 1999;
+}
+
+#infoCardImg::before {
+    content: '';
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    height: 25%;
+    z-index: 2000;
 }
 
 #infoCard img {
@@ -283,7 +326,24 @@ main {
     background-color: gray;
 }
 
+#infoCardTitle p {
+    color: var(--secondaryTextColor);
+}
 
+#infoCardTitle i {
+    padding-right: 5px;
+}
+
+#infoCardData {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#infoCardData h2 {
+    font-size: 30px;
+}
 
 /* ------------------- FOOTER ------------------- */
 

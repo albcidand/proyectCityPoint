@@ -74,6 +74,7 @@
     <script src="favorites.js"></script>
     <script src="sevillaFilter.js"></script>
     <script src="expandCard.js"></script>
+    <script src="nav.js"></script>
     <script>
         var url_global = '{{url("/")}}';
         var token = '{{csrf_token()}}';

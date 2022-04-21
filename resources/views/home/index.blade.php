@@ -24,6 +24,12 @@
 
             <img src="/assets/userPlaceholderImg.png" alt="User Pic" id="userPic">
 
+            <nav id="mobileNav">
+                
+            </nav>
+
+            <nav id="desktopNav"></nav>
+
         </header>
         <div id="content">
 
@@ -106,6 +112,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="home.js"></script>
     <script src="expandCard.js"></script>
+    <script src="nav.js"></script>
+
     <script>
         var url_global = '{{url("/")}}';
         var token = '{{csrf_token()}}';

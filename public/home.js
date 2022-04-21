@@ -4,9 +4,6 @@ $(document).on('click', '.fav_btn', function () {
     let id = $(this).val()
     clicked_btn = $(this)
 
-    $(this).addClass('btn_active')
-    $(this).children('i').addClass('fav_active')
-
 
     $.ajax({
         method: 'GET',
@@ -33,6 +30,9 @@ $(document).on('click', '.fav_btn', function () {
                 )
 
             } else {
+
+                clicked_btn.addClass('btn_active')
+                clicked_btn.children('i').addClass('fav_active')
 
                 $('.fav_places').html('');
                 response.forEach(element => {

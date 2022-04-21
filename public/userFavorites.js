@@ -34,23 +34,7 @@ $(document).on('click', '.fav_btn', function () {
 
             } else {
 
-                $('.fav_places').html('');
-                response.forEach(element => {
-                    $('.fav_places').append(
-                        '<div class="card">' +
-                        '<button class="fav_btn btn_active" value="' + element.place_id + '"><i class="uil uil-heart fav_active"></i></button>' +
-                        '<img src="' + element.place_img + '" alt="">' +
-                        '<div>' +
-                        '<h2>' + element.place_title + '</h2>' +
-                        '<p><i class="uil uil-map-marker"></i><a href="' + element.place_location + '" target="_BLANK">' + element.place_city + '</a></p>' +
-                        '<p class="hidden_info">' + element.place_description + '</p>' +
-                        '</div>' +
-                        '<p id="srcMap" class="hidden_info">' + element.place_map + '</p>' +
-                        '</div>'
-                    );
-
-                    $('.card').eq(4).hide().fadeIn();
-                })
+                return true
 
             }
         }
@@ -76,10 +60,9 @@ $(document).on('click', '#btn_confirm_alert', function () {
         },
         success: function (response) {
 
-
-            $('.fav_places').html('');
+            $('#places').html('');
             response.forEach(element => {
-                $('.fav_places').append(
+                $('#places').append(
                     '<div class="card">' +
                     '<button class="fav_btn btn_active" value="' + element.place_id + '"><i class="uil uil-heart fav_active"></i></button>' +
                     '<img src="' + element.place_img + '" alt="">' +
@@ -98,4 +81,4 @@ $(document).on('click', '#btn_confirm_alert', function () {
 
     $('#alert').remove();
 
-});
+})

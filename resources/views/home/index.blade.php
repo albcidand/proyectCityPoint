@@ -54,13 +54,14 @@
                         @foreach($randomPlaces as $place)
                         
                             <div class="card">
-                                <button class="fav_btn" value="{{$place -> place_id}}"><i class="uil uil-heart-alt"></i></button>
+                                <button class="fav_btn" value="{{$place -> place_id}}"><i class="uil uil-heart"></i></button>
                                 <img src="{{$place -> place_img}}" alt="">
                                 <div>
                                     <h2>{{$place -> place_title}}</h2>
                                     <p><i class="uil uil-map-marker"></i><a href="{{$place -> place_location}}" target="_BLANK">{{$place -> place_city}}</a></p>
-                                    <p>{{$place -> place_description}}</p>
+                                    <p class="hidden_info">{{$place -> place_description}}</p>
                                 </div>
+                                <p id="srcMap" class="hidden_info">{{$place -> place_map}}</p>
                             </div>
 
                         @endforeach
@@ -78,18 +79,19 @@
                 <div id="cardContainer" class="fav_places">
                         @foreach($favoritePlaces as $favorite)
                             <div class="card">
-                            <button class="fav_btn btn_active" value="{{$favorite -> place_id}}"><i class="uil uil-heart-alt fav_active"></i></button>
+                                <button class="fav_btn btn_active" value="{{$favorite -> place_id}}"><i class="uil uil-heart fav_active"></i></button>
                                 <img src="{{$favorite -> place_img}}" alt="">
                                 <div>
                                     <h2>{{$favorite -> place_title}}</h2>
                                     <p><i class="uil uil-map-marker"></i><a href="{{$favorite -> place_location}}" target="_BLANK">{{$favorite -> place_city}}</a></p>
-                                    <p>{{$favorite -> place_description}}</p>
+                                    <p class="hidden_info">{{$favorite -> place_description}}</p>
                                 </div>
+                                <p id="srcMap" class="hidden_info">{{$favorite -> place_map}}</p>
                             </div>
                         @endforeach
                 </div>
 
-                <div id="seeMoreFavBtn"><a href="">See more</a></div>
+                <div id="seeMoreFavBtn"><a href="/favorites">See more</a></div>
 
             </aside>
         </div>
@@ -103,6 +105,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="home.js"></script>
+    <script src="expandCard.js"></script>
     <script>
         var url_global = '{{url("/")}}';
         var token = '{{csrf_token()}}';

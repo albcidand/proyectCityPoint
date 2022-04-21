@@ -31,24 +31,24 @@
             <section id="title">
 
                 <div>
-                    <h2>Nature Places</h2>
+                    <h2>Favorite Places</h2>
                     <a href="/home"><i class="uil uil-arrow-left"></i> Go Back</a>
                 </div>
-                    <p>A selection of nature related places from cities all around the world</p>
+                <p>Your favorites</p>
 
             </section>
              
             <section id="places">
-                @foreach($nature as $nature_place)
+                @foreach($favoritePlaces as $favorite)
                             <div class="card">
-                                <button class="fav_btn" value="{{$nature_place -> place_id}}"><i class="uil uil-heart"></i></button>
-                                <img src="{{$nature_place -> place_img}}" alt="">
+                                <button class="fav_btn btn_active" value="{{$favorite -> place_id}}"><i class="uil uil-heart fav_active"></i></button>
+                                <img src="{{$favorite -> place_img}}" alt="">
                                 <div>
-                                    <h2>{{$nature_place -> place_title}}</h2>
-                                    <p><i class="uil uil-map-marker"></i><a href="{{$nature_place -> place_location}}" target="_BLANK">{{$nature_place -> place_city}}</a></p>
-                                    <p class="hidden_info">{{$nature_place -> place_description}}</p>
+                                    <h2>{{$favorite -> place_title}}</h2>
+                                    <p><i class="uil uil-map-marker"></i><a href="{{$favorite -> place_location}}" target="_BLANK">{{$favorite -> place_city}}</a></p>
+                                    <p class="hidden_info">{{$favorite -> place_description}}</p>
                                 </div>
-                                <p id="srcMap" class="hidden_info">{{$nature_place -> place_map}}</p>
+                                <p id="srcMap" class="hidden_info">{{$favorite -> place_map}}</p>
                             </div>
                 @endforeach
             </section>
@@ -62,8 +62,8 @@
         </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="favorites.js"></script>
     <script src="expandCard.js"></script>
+    <script src="userFavorites.js"></script>
     <script>
         var url_global = '{{url("/")}}';
         var token = '{{csrf_token()}}';

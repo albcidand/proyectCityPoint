@@ -41,13 +41,14 @@
             <section id="places">
                 @foreach($secret as $secret_place)
                             <div class="card">
-                                <button class="fav_btn" value="{{$secret_place -> place_id}}"><i class="uil uil-heart-alt"></i></button>
+                                <button class="fav_btn" value="{{$secret_place -> place_id}}"><i class="uil uil-heart"></i></button>
                                 <img src="{{$secret_place -> place_img}}" alt="">
                                 <div>
                                     <h2>{{$secret_place -> place_title}}</h2>
                                     <p><i class="uil uil-map-marker"></i><a href="{{$secret_place -> place_location}}" target="_BLANK">{{$secret_place -> place_city}}</a></p>
-                                    <p>{{$secret_place -> place_description}}</p>
+                                    <p class="hidden_info">{{$secret_place -> place_description}}</p>
                                 </div>
+                                <p id="srcMap" class="hidden_info">{{$secret_place -> place_map}}</p>
                             </div>
                 @endforeach
             </section>
@@ -62,6 +63,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="favorites.js"></script>
+    <script src="expandCard.js"></script>
     <script>
         var url_global = '{{url("/")}}';
         var token = '{{csrf_token()}}';

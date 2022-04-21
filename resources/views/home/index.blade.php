@@ -59,9 +59,9 @@
                                 <div>
                                     <h2>{{$place -> place_title}}</h2>
                                     <p><i class="uil uil-map-marker"></i><a href="{{$place -> place_location}}" target="_BLANK">{{$place -> place_city}}</a></p>
-                                    <p>{{$place -> place_description}}</p>
+                                    <p class="hidden_info">{{$place -> place_description}}</p>
                                 </div>
-                                <p id="srcMap">{{$place -> place_map}}</p>
+                                <p id="srcMap" class="hidden_info">{{$place -> place_map}}</p>
                             </div>
 
                         @endforeach
@@ -84,9 +84,9 @@
                                 <div>
                                     <h2>{{$favorite -> place_title}}</h2>
                                     <p><i class="uil uil-map-marker"></i><a href="{{$favorite -> place_location}}" target="_BLANK">{{$favorite -> place_city}}</a></p>
-                                    <p>{{$favorite -> place_description}}</p>
+                                    <p class="hidden_info">{{$favorite -> place_description}}</p>
                                 </div>
-                                <p id="srcMap">{{$favorite -> place_map}}</p>
+                                <p id="srcMap" class="hidden_info">{{$favorite -> place_map}}</p>
                             </div>
                         @endforeach
                 </div>

@@ -18,15 +18,17 @@ body {
 
 #wrapper {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 /* ------------------- HEADER ------------------- */
 
 header {
     width: 100%;
-    padding: 0 10px;
+    padding: 0 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -149,8 +151,9 @@ main {
     display: grid;
     justify-content: center;
     grid-auto-rows: minmax(20em, auto);
-    grid-template-columns: repeat(2, 13em);
+    grid-template-columns: repeat(2, 12em);
     gap: 10px 10px;
+    margin: 0 20px 0 20px;
 }
 
 /* ALERT FAVORITES */
@@ -225,6 +228,11 @@ main {
     left: 10px;
 }
 
+.card a {
+    text-decoration: none;
+    color: var(--secondaryTextColor);
+}
+
 .uil {
     color: var(--primaryColor);
 }
@@ -260,7 +268,7 @@ main {
     object-fit: cover;
 }
 
-#srcMap {
+.hidden_info {
     display: none;
 }
 
@@ -285,6 +293,7 @@ main {
     display: flex;
     flex-direction: column;
     background-color: white;
+    overflow: auto;
 }
 
 #infoCard button {
@@ -298,19 +307,15 @@ main {
     font-size: 25px;
 }
 
-#infoCard>div {
-    height: 50%;
-}
-
 #infoCardImg {
     position: relative;
     z-index: 1999;
+    height: 50%;
 }
 
 #infoCardImg::before {
     content: '';
     width: 100%;
-    display: block;
     position: absolute;
     bottom: 0;
     background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
@@ -339,15 +344,25 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 30px;
 }
 
 #infoCardData h2 {
     font-size: 30px;
 }
 
+#infoCardData h4 {
+    padding-bottom: 5px;
+}
+
+#infoCardMap iframe {
+    border-radius: 10px;
+}
+
 /* ------------------- FOOTER ------------------- */
 
 footer {
+    width: 100%;
     padding: 20px;
     display: flex;
     align-items: center;

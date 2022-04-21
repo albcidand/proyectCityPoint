@@ -17,8 +17,9 @@ $('.categories_btn').click(function () {
                     '<div>' +
                     '<h2>' + element.place_title + '</h2>' +
                     '<p><i class="uil uil-map-marker"></i><a href="' + element.place_location + '" target="_BLANK">' + element.place_city + '</a></p>' +
-                    '<p>' + element.place_description + '</p>' +
+                    '<p class="hidden_info">' + element.place_description + '</p>' +
                     '</div>' +
+                    '<p id="srcMap" class="hidden_info">' + element.place_map + '</p>' +
                     '</div>'
                 )
             })

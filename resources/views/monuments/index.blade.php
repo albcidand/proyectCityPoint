@@ -46,8 +46,9 @@
                                 <div>
                                     <h2>{{$monument -> place_title}}</h2>
                                     <p><i class="uil uil-map-marker"></i><a href="{{$monument -> place_location}}" target="_BLANK">{{$monument -> place_city}}</a></p>
-                                    <p>{{$monument -> place_description}}</p>
+                                    <p class="hidden_info">{{$monument -> place_description}}</p>
                                 </div>
+                                <p id="srcMap" class="hidden_info">{{$monument -> place_map}}</p>
                             </div>
                 @endforeach
             </section>
@@ -62,6 +63,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="favorites.js"></script>
+    <script src="expandCard.js"></script>
     <script>
         var url_global = '{{url("/")}}';
         var token = '{{csrf_token()}}';

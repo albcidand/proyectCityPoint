@@ -2,11 +2,14 @@
 
 :root {
     --primaryColor: #4361ee;
-    --backgroundColor: #f5f5f6;
+    --backgroundColor: #fafcff;
     --secondaryTextColor: #afb2bc;
     --fav_color: #ff0054;
+    --whiteColor: rgba(255, 255, 255, 1);
     --darkMode: #202020;
     --fontSize: 14px;
+    --boxShadow: 0.3em 0.3em 0.7em #00000015;
+    --btnBoxShadow: 1px -1px 15px #14141444;
 }
 
 body {
@@ -33,7 +36,7 @@ main {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(12, 17, 23, .35),rgba(12, 17, 23, .35)), url(/assets/hero.jpg);
+    background-image: linear-gradient(rgba(12, 17, 23, .35), rgba(12, 17, 23, .35)), url(/assets/hero.jpg);
     background-position: top;
     background-size: cover;
     background-attachment: fixed;
@@ -41,23 +44,35 @@ main {
 
 .tarjeta {
     text-align: center;
-    border-radius: 20px;
+    border-radius: 10px;
+    padding: 30px;
     height: 50vh;
-    width: clamp(17em, 27em, 30vw);
+    width: clamp(17em, 50vw, 35vw);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(6px) saturate(180%);
+    -webkit-backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.0);
     gap: 10px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.tarjeta h1 {
+    font-size: clamp(2.3rem, 5vw, 5rem);
+}
+
+.tarjeta span {
+    color: var(--primaryColor);
 }
 
 #loginForm {
-    padding: 0 15px;
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    width: 100%;
 }
 
 .tarjeta input {
@@ -65,23 +80,67 @@ main {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     background: none;
     outline: none;
+    color: var(--whiteColor);
 }
 
 .tarjeta input::placeholder {
-    color: white;
+    color: var(--whiteColor);
 }
 
-.tarjeta > div {
-    margin-bottom: 15px;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--whiteColor);
+    -webkit-background-clip: text;
+}
+
+#loginForm button {
+    padding: 3px 10px;
+    color: var(--darkMode);
+    background-color: var(--whiteColor);
+    border: var(--primaryColor) 2px solid;
+    border-radius: 5px;
+    width: 40%;
+    align-self: center;
+}
+
+#guestContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--whiteColor);
 }
 
 #guestBtn {
-    align-self: flex-end;
-    justify-self: flex-end;
+    text-decoration: none;
+    padding: 3px 10px;
+    color: var(--darkMode);
+    background-color: var(--whiteColor);
+    border: var(--primaryColor) 2px solid;
+    border-radius: 5px;
 }
 
+#loginForm button:hover,
+#guestBtn:hover {
+    color: var(--whiteColor);
+    background-color: var(--primaryColor);
+}
 
+/* ------------------- FOOTER ------------------- */
 
+footer {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+footer p {
+    font-size: 12px;
+}
 
-
+footer span {
+    color: var(--primaryColor);
+    font-weight: 600;
+}

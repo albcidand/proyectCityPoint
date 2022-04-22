@@ -38,7 +38,7 @@ $(document).on('click', '.fav_btn', function () {
                 response.forEach(element => {
                     $('.fav_places').append(
                         '<div class="card">' +
-                        '<button class="fav_btn btn_active" value="' + element.place_id + '"><i class="uil uil-heart fav_active"></i></button>' +
+                        '<button class="fav_btn btn_active" value="' + element.place_id + '"><i class="uil uil-heart likeHeart fav_active"></i></button>' +
                         '<img src="' + element.place_img + '" alt="">' +
                         '<div>' +
                         '<h2>' + element.place_title + '</h2>' +
@@ -81,7 +81,7 @@ $(document).on('click', '#btn_confirm_alert', function () {
             response.forEach(element => {
                 $('.fav_places').append(
                     '<div class="card">' +
-                    '<button class="fav_btn btn_active" value="' + element.place_id + '"><i class="uil uil-heart fav_active"></i></button>' +
+                    '<button class="fav_btn btn_active" value="' + element.place_id + '"><i class="uil uil-heart likeHeart fav_active"></i></button>' +
                     '<img src="' + element.place_img + '" alt="">' +
                     '<div>' +
                     '<h2>' + element.place_title + '</h2>' +

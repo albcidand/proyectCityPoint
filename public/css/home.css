@@ -21,10 +21,15 @@ body {
 #categories a {
     text-decoration: none;
     padding: 3px 10px;
-    color: black;
-    background-color: white;
+    color: var(--darkMode);
+    background-color: var(--whiteColor);
     border: var(--primaryColor) 2px solid;
     border-radius: 5px;
+}
+
+#categories a:hover {
+    color: var(--whiteColor);
+    background-color: var(--primaryColor);
 }
 
 #categories button {
@@ -75,7 +80,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    color: white;
+    color: var(--whiteColor);
 }
 
 .city p {
@@ -121,4 +126,13 @@ aside {
 #seeMoreFavBtn a {
     text-decoration: none;
     padding: 3px 10px;
+    color: var(--darkMode);
+    background-color: var(--whiteColor);
+    border: var(--primaryColor) 2px solid;
+    border-radius: 5px;
+}
+
+#seeMoreFavBtn a:hover {
+    color: var(--whiteColor);
+    background-color: var(--primaryColor);
 }

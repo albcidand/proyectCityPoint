@@ -10,11 +10,45 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div id="wrapper">
 
         <header>
+            <div class="blur"></div>
+            <nav id="mobileNav">
+
+                <div id="mobileNavContainer">
+                    <a href="#">
+                    <i class="uil uil-house-user"></i>
+                        <h3>Home</h3>
+                    </a>
+    
+                    <a href="#">
+                    <i class="uil uil-user"></i>
+                        <h3>Profile</h3>
+                    </a>
+    
+                    <a href="/favorites">
+                    <i class="uil uil-heart"></i>
+                        <h3>Favorites</h3>
+                    </a>
+    
+                    <a href="#">
+                    <i class="uil uil-setting"></i>
+                        <h3>Settings</h3>
+                    </a>
+    
+                    <a href="/">
+                    <i class="uil uil-signout"></i>
+                        <h3>Logout</h3>
+                    </a>
+                </div>
+                
+            </nav>
+
+            <nav id="desktopNav"></nav>
 
             <button id="hamburger"> <!-- botón hamburguesa del menu mobile -->
                 <div class="bar"></div>
@@ -22,13 +56,7 @@
 
             <a href="/home" id="logo">City<span>Point</span></a>
 
-            <img src="/assets/userPlaceholderImg.png" alt="User Pic" id="userPic">
-
-            <nav id="mobileNav">
-                
-            </nav>
-
-            <nav id="desktopNav"></nav>
+            <img src="/assets/userPlaceholderImg.png" alt="User Pic" id="userPic"> 
 
         </header>
         <div id="content">
@@ -60,7 +88,7 @@
                         @foreach($randomPlaces as $place)
                         
                             <div class="card">
-                                <button class="fav_btn" value="{{$place -> place_id}}"><i class="uil uil-heart"></i></button>
+                                <button class="fav_btn" value="{{$place -> place_id}}"><i class="uil uil-heart likeHeart"></i></button>
                                 <img src="{{$place -> place_img}}" alt="">
                                 <div>
                                     <h2>{{$place -> place_title}}</h2>
@@ -85,7 +113,7 @@
                 <div id="cardContainer" class="fav_places">
                         @foreach($favoritePlaces as $favorite)
                             <div class="card">
-                                <button class="fav_btn btn_active" value="{{$favorite -> place_id}}"><i class="uil uil-heart fav_active"></i></button>
+                                <button class="fav_btn btn_active" value="{{$favorite -> place_id}}"><i class="uil uil-heart likeHeart fav_active"></i></button>
                                 <img src="{{$favorite -> place_img}}" alt="">
                                 <div>
                                     <h2>{{$favorite -> place_title}}</h2>
@@ -97,13 +125,13 @@
                         @endforeach
                 </div>
 
-                <div id="seeMoreFavBtn"><a href="/favorites">See more</a></div>
+                <div id="seeMoreFavBtn"><a href="/favorites">See more favorites</a></div>
 
             </aside>
         </div>
 
         <footer>
-            <p>Coded by <span>Alberto Cid</span>| <i class="far fa-copyright"></i> 2022 All rights reserved</p>
+            <p>Design <span>&</span> Code by <span>&nbsp<i class="fa-solid fa-terminal"></i> Alberto Cid&nbsp</span> 2022</p>
         </footer>
 
         

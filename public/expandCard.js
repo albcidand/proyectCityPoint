@@ -13,7 +13,7 @@ $(document).on('click', '.card', function (e) {
             '<div id="infoCardContainer">' +
 
             '<div id="infoCard">' +
-            '<button class="fav_btn" value="' + $(this).children('button').val() + '"><i class="uil uil-heart"></i></button>' +
+            '<button class="fav_btn" value="' + $(this).children('button').val() + '"><i class="uil uil-heart likeHeart"></i></button>' +
             '<button class="closeCard_btn"><i class="uil uil-arrow-left"></i></button>' +
             '<div id="infoCardImg"><img src="' + $(this).children('img').attr('src') + '" alt=""></div>' +
             '<div id="infoCardData">' +

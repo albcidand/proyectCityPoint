@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -30,11 +31,9 @@
                         <input type="password" id="password" name="password" placeholder="Password">
                         <button id="loginBtn">Login</button>
                     </form>
-                    <div>
+                    <div id="guestContainer">
                         <p>Or</p>
-                        <button id="guestBtn"><a href="/home">Enter as a Guest</a></button>
-                        <p></p>
-                        <button id="funciona"><a href="/home2">Enter</a></button>
+                        <a id="guestBtn" href="/home">Enter as a Guest</a>
                     </div>
                 </div>
 
@@ -42,7 +41,9 @@
 
         </main>
 
-        <footer></footer>
+        <footer>
+            <p>Design <span>&</span> Code by <span>&nbsp<i class="fa-solid fa-terminal"></i> Alberto Cid&nbsp</span> 2022</p>
+        </footer>
 
 
 

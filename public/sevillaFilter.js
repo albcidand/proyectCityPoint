@@ -12,7 +12,7 @@ $('.categories_btn').click(function () {
             response.forEach(element => {
                 $('#places').append(
                     '<div class="card">' +
-                    '<button class="fav_btn" value="' + element.place_id + '"><i class="uil uil-heart"></i></button>' +
+                    '<button class="fav_btn" value="' + element.place_id + '"><i class="uil uil-heart likeHeart"></i></button>' +
                     '<img src="' + element.place_img + '" alt="">' +
                     '<div>' +
                     '<h2>' + element.place_title + '</h2>' +

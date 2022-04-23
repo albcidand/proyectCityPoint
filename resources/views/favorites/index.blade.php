@@ -66,7 +66,7 @@
             <section id="title">
 
                 <div>
-                    <h2>Favorite Places</h2>
+                    <p class="sectionTitle">Favorite Places</p>
                     <a href="/home"><i class="uil uil-arrow-left"></i> Go Back</a>
                 </div>
                 <p>Your favorites</p>
@@ -79,7 +79,7 @@
                                 <button class="fav_btn btn_active" value="{{$favorite -> place_id}}"><i class="uil uil-heart likeHeart fav_active"></i></button>
                                 <img src="{{$favorite -> place_img}}" alt="">
                                 <div>
-                                    <h2>{{$favorite -> place_title}}</h2>
+                                    <h3>{{$favorite -> place_title}}</h3>
                                     <p><i class="uil uil-map-marker"></i><a href="{{$favorite -> place_location}}" target="_BLANK">{{$favorite -> place_city}}</a></p>
                                     <p class="hidden_info">{{$favorite -> place_description}}</p>
                                 </div>

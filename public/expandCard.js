@@ -18,7 +18,7 @@ $(document).on('click', '.card', function (e) {
             '<div id="infoCardImg"><img src="' + $(this).children('img').attr('src') + '" alt=""></div>' +
             '<div id="infoCardData">' +
             '<div id="infoCardTitle">' +
-            '<h2>' + $(this).children('div').children('h2').text() + '</h2>' +
+            '<h2>' + $(this).children('div').children('h3').text() + '</h2>' +
 
 
             '<p><i class="uil uil-map-marker"></i>' + $(this).children('div').children('p:nth-child(2)').text() + '</p>' +

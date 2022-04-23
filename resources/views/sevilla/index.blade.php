@@ -68,7 +68,7 @@
             <section id="title">
 
                 <div>
-                    <h2>Sevilla</h2>
+                    <p class="sectionTitle">Sevilla</p>
                     <a href="/home"><i class="uil uil-arrow-left"></i> Go Back</a>
                 </div>
                 <p>Discover places in Sevilla</p>
@@ -88,7 +88,7 @@
                                 <button class="fav_btn" value="{{$place -> place_id}}"><i class="uil uil-heart likeHeart"></i></button>
                                 <img src="{{$place -> place_img}}" alt="">
                                 <div>
-                                    <h2>{{$place -> place_title}}</h2>
+                                    <h3>{{$place -> place_title}}</h3>
                                     <p><i class="uil uil-map-marker"></i><a href="{{$place -> place_location}}" target="_BLANK">{{$place -> place_city}}</a></p>
                                     <p class="hidden_info">{{$place -> place_description}}</p>
                                 </div>

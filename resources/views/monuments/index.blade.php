@@ -66,7 +66,7 @@
             <section id="title">
 
                 <div>
-                    <h2>Monuments</h2>
+                    <p class="sectionTitle">Monuments</p>
                     <a href="/home"><i class="uil uil-arrow-left"></i> Go Back</a>
                 </div>
                 <p>A selection of monuments from cities all around the world</p>
@@ -79,7 +79,7 @@
                                 <button class="fav_btn" value="{{$monument -> place_id}}"><i class="uil uil-heart likeHeart"></i></button>
                                 <img src="{{$monument -> place_img}}" alt="">
                                 <div>
-                                    <h2>{{$monument -> place_title}}</h2>
+                                    <h3>{{$monument -> place_title}}</h3>
                                     <p><i class="uil uil-map-marker"></i><a href="{{$monument -> place_location}}" target="_BLANK">{{$monument -> place_city}}</a></p>
                                     <p class="hidden_info">{{$monument -> place_description}}</p>
                                 </div>

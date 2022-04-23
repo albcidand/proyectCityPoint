@@ -66,7 +66,7 @@
             <section id="title">
 
                 <div>
-                    <h2>Nature Places</h2>
+                    <p class="sectionTitle">Nature Places</p>
                     <a href="/home"><i class="uil uil-arrow-left"></i> Go Back</a>
                 </div>
                     <p>A selection of nature related places from cities all around the world</p>
@@ -79,7 +79,7 @@
                                 <button class="fav_btn" value="{{$nature_place -> place_id}}"><i class="uil uil-heart likeHeart"></i></button>
                                 <img src="{{$nature_place -> place_img}}" alt="">
                                 <div>
-                                    <h2>{{$nature_place -> place_title}}</h2>
+                                    <h3>{{$nature_place -> place_title}}</h3>
                                     <p><i class="uil uil-map-marker"></i><a href="{{$nature_place -> place_location}}" target="_BLANK">{{$nature_place -> place_city}}</a></p>
                                     <p class="hidden_info">{{$nature_place -> place_description}}</p>
                                 </div>

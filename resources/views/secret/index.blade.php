@@ -66,7 +66,7 @@
             <section id="title">
 
                 <div>
-                    <h2>Secret Places</h2>
+                    <p class="sectionTitle">Secret Places</p>
                     <a href="/home"><i class="uil uil-arrow-left"></i> Go Back</a>
                 </div>
                 <p>A selection of secret places from cities all around the world</p>
@@ -79,7 +79,7 @@
                                 <button class="fav_btn" value="{{$secret_place -> place_id}}"><i class="uil uil-heart likeHeart"></i></button>
                                 <img src="{{$secret_place -> place_img}}" alt="">
                                 <div>
-                                    <h2>{{$secret_place -> place_title}}</h2>
+                                    <h3>{{$secret_place -> place_title}}</h3>
                                     <p><i class="uil uil-map-marker"></i><a href="{{$secret_place -> place_location}}" target="_BLANK">{{$secret_place -> place_city}}</a></p>
                                     <p class="hidden_info">{{$secret_place -> place_description}}</p>
                                 </div>

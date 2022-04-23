@@ -8,7 +8,25 @@ body {
 
 /* MAIN TITLE */
 
-#title {}
+#titleHomeContainer {
+    margin-top: 50px;
+}
+
+#titleHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+}
+
+#titleHome h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#titleHome h2 span {
+    color: var(--primaryColor);
+}
 
 /* FILTRO CATEGORÍAS */
 
@@ -90,30 +108,30 @@ body {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 300;
     padding-top: 20px;
 }
 
 #random {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 5px;
 }
 
 #cardContainer {
     display: grid;
     justify-content: center;
-    grid-auto-rows: minmax(20em, auto);
+    grid-auto-rows: minmax(17em, auto);
     grid-template-columns: repeat(2, 12em);
     gap: 10px 10px;
 }
 
 /* ------------------- ASIDE CONTENT------------------- */
 
-aside {
+#favorites {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 5px;
     margin: 0px 20px 0 20px;
 }
 
@@ -121,6 +139,7 @@ aside {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 25px;
 }
 
 #seeMoreFavBtn a {

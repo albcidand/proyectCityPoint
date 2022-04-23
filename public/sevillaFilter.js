@@ -15,7 +15,7 @@ $('.categories_btn').click(function () {
                     '<button class="fav_btn" value="' + element.place_id + '"><i class="uil uil-heart likeHeart"></i></button>' +
                     '<img src="' + element.place_img + '" alt="">' +
                     '<div>' +
-                    '<h2>' + element.place_title + '</h2>' +
+                    '<h3>' + element.place_title + '</h3>' +
                     '<p><i class="uil uil-map-marker"></i><a href="' + element.place_location + '" target="_BLANK">' + element.place_city + '</a></p>' +
                     '<p class="hidden_info">' + element.place_description + '</p>' +
                     '</div>' +

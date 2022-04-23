@@ -21,7 +21,7 @@
 
                 <div id="mobileNavContainer">
                     <a href="#">
-                    <i class="uil uil-house-user"></i>
+                    <i class="uil uil-estate"></i>
                         <h3>Home</h3>
                     </a>
     
@@ -63,9 +63,11 @@
 
             <main>
     
-                <section id="title">
-                    <h2>Explore</h2>
-                    <p>What do you want to discover?</p>
+                <section id="titleHomeContainer">
+                    <div id="titleHome">
+                        <h2>Discover<br><span>New</span> Places.</h2>
+                    </div>
+
                 </section>
     
                 <section id="categories">
@@ -83,7 +85,7 @@
                 </section>
     
                 <section id="random">
-                <h2>Random Places</h2>
+                <p class="sectionTitle">Random Places</p>
                     <div id="cardContainer">
                         @foreach($randomPlaces as $place)
                         
@@ -91,7 +93,7 @@
                                 <button class="fav_btn" value="{{$place -> place_id}}"><i class="uil uil-heart likeHeart"></i></button>
                                 <img src="{{$place -> place_img}}" alt="">
                                 <div>
-                                    <h2>{{$place -> place_title}}</h2>
+                                    <h3>{{$place -> place_title}}</h3>
                                     <p><i class="uil uil-map-marker"></i><a href="{{$place -> place_location}}" target="_BLANK">{{$place -> place_city}}</a></p>
                                     <p class="hidden_info">{{$place -> place_description}}</p>
                                 </div>
@@ -108,7 +110,7 @@
             </main>
     
             <aside id="favorites">
-                <h2>Favorite Places</h2>
+                <p class="sectionTitle">Favorite Places</p>
 
                 <div id="cardContainer" class="fav_places">
                         @foreach($favoritePlaces as $favorite)
@@ -116,7 +118,7 @@
                                 <button class="fav_btn btn_active" value="{{$favorite -> place_id}}"><i class="uil uil-heart likeHeart fav_active"></i></button>
                                 <img src="{{$favorite -> place_img}}" alt="">
                                 <div>
-                                    <h2>{{$favorite -> place_title}}</h2>
+                                    <h3>{{$favorite -> place_title}}</h3>
                                     <p><i class="uil uil-map-marker"></i><a href="{{$favorite -> place_location}}" target="_BLANK">{{$favorite -> place_city}}</a></p>
                                     <p class="hidden_info">{{$favorite -> place_description}}</p>
                                 </div>

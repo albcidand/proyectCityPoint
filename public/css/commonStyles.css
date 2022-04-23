@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
 :root {
     --primaryColor: #4361ee;
     --backgroundColor: #fafcff;
@@ -14,7 +16,7 @@
 }
 
 body {
-    font-family: Montserrat;
+    font-family: Poppins;
     font-size: var(--fontSize);
 }
 
@@ -24,6 +26,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+h3 {
+    font-weight: 500;
 }
 
 /* ------------------- HEADER ------------------- */
@@ -204,16 +210,20 @@ main {
 }
 
 #title {
-    margin-top: 22px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 #title div {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 #title div a {
@@ -232,10 +242,9 @@ main {
 #places {
     display: grid;
     justify-content: center;
-    grid-auto-rows: minmax(20em, auto);
+    grid-auto-rows: minmax(17em, auto);
     grid-template-columns: repeat(2, 12em);
     gap: 10px 10px;
-    margin: 0 20px 0 20px;
 }
 
 /* ALERT FAVORITES */

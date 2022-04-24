@@ -65,21 +65,21 @@
             <main>
 
                 <div id="hero_img_madrid"></div>
-            <section id="title">
+            <section class="filterTitle">
 
                 <div>
                     <p class="sectionTitle">Madrid</p>
-                    <a href="/home"><i class="uil uil-arrow-left"></i> Go Back</a>
+                    <a id="backBtn" href="/home"><i class="uil uil-arrow-left"></i><p>Go Back</p></a>
                 </div>
-                <p>Discover places in Madrid</p>
+                <p class="muted">Discover places in Madrid</p>
 
             </section>
 
             <section id="categories">
-                <button class="categories_btn" id="categoriesMonument" value="monument">Monument</button>
-                <button class="categories_btn" id="categoriesNature" value="nature">Nature</button>
-                <button class="categories_btn" id="categoriesFood" value="food">Food</button>
-                <button class="categories_btn" id="categoriesSecret" value="secret">Secret</button>
+                <button class="categories_btn" id="categoriesMonument" value="monument"><i class="fa-solid fa-landmark-dome"></i> Monument</button>
+                <button class="categories_btn" id="categoriesNature" value="nature"><i class="fa-solid fa-leaf"></i> Nature</button>
+                <button class="categories_btn" id="categoriesFood" value="food"><i class="fa-solid fa-utensils"></i> Food</button>
+                <button class="categories_btn" id="categoriesSecret" value="secret"><i class="fa-solid fa-user-secret"></i> Secret</button>
             </section>
              
             <section id="places">

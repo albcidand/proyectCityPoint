@@ -34,12 +34,22 @@
                     <i class="uil uil-heart"></i>
                         <h3>Favorites</h3>
                     </a>
+
+                    <a href="/">
+                    <i class="uil uil-envelope-check"></i>
+                        <h3>Messages</h3>
+                    </a>
     
                     <a href="#">
                     <i class="uil uil-setting"></i>
                         <h3>Settings</h3>
                     </a>
     
+                    <a href="/">
+                    <i class="uil uil-plus-circle"></i>
+                        <h3>Add Place</h3>
+                    </a>
+
                     <a href="/">
                     <i class="uil uil-signout"></i>
                         <h3>Logout</h3>
@@ -67,14 +77,21 @@
                     <div id="titleHome">
                         <h2>Discover<br><span>New</span> Places.</h2>
                     </div>
-
                 </section>
     
                 <section id="categories">
-                    <button id="categoriesMonument"><a href="/monuments">Monument</a></button>
-                    <button id="categoriesNature"><a href="/nature">Nature</a></button>
-                    <button id="categoriesFood"><a href="/food">Food</a></button>
-                    <button id="categoriesSecret"><a href="/secret">Secret</a></button>
+                    <div class="categoriesBtn">
+                        <a href="/monuments"><i class="fa-solid fa-landmark-dome"></i><p>Monument</p></a>
+                    </div>
+                    <div class="categoriesBtn">
+                        <a href="/nature"><i class="fa-solid fa-leaf"></i><p>Nature</p></a>
+                    </div>
+                    <div class="categoriesBtn">
+                        <a href="/food"><i class="fa-solid fa-utensils"></i><p>Food</p></a>
+                    </div>
+                    <div class="categoriesBtn">
+                        <a href="/secret"><i class="fa-solid fa-user-secret"></i><p>Secret</p></a>
+                    </div>
                 </section>
     
                 <section id="cities">

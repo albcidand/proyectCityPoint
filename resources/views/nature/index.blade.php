@@ -67,9 +67,9 @@
 
                 <div>
                     <p class="sectionTitle">Nature Places</p>
-                    <a href="/home"><i class="uil uil-arrow-left"></i> Go Back</a>
+                    <a id="backBtn" href="/home"><i class="uil uil-arrow-left"></i><p>Go Back</p></a>
                 </div>
-                    <p>A selection of nature related places from cities all around the world</p>
+                    <p class="muted">A selection of nature related places from cities all around the world</p>
 
             </section>
              

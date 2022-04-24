@@ -4,6 +4,7 @@
     background-image: url(/assets/sevilla.jpg);
     background-size: cover;
     background-position: center;
+    margin-top: 20px;
 }
 
 #hero_img_madrid {
@@ -12,6 +13,7 @@
     background-image: url(/assets/madrid.jpg);
     background-size: cover;
     background-position: center;
+    margin-top: 20px;
 }
 
 #hero_img_valencia {
@@ -20,6 +22,7 @@
     background-image: url(/assets/valencia.jpg);
     background-size: cover;
     background-position: center;
+    margin-top: 20px;
 }
 
 #hero_img_lisbon {
@@ -28,9 +31,43 @@
     background-image: url(/assets/lisboa.jpg);
     background-size: cover;
     background-position: center;
+    margin-top: 20px;
 }
+
+/* category filter */
 
 #categories {
     display: flex;
     justify-content: space-between;
+}
+
+.categories_btn {
+    color: var(--darkMode);
+    background-color: var(--whiteColor);
+    border: var(--primaryColor) 2px solid;
+    border-radius: 5px;
+    transition: all .35s ease;
+    text-align: center;
+    padding: 3px 5px;
+}
+
+.categories_btn>i {
+    padding-right: 1.5px;
+}
+
+.categories_btn:hover {
+    color: var(--whiteColor);
+    background-color: var(--primaryColor);
+}
+
+.filterTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filterTitle div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

@@ -67,9 +67,9 @@
 
                 <div>
                     <p class="sectionTitle">Favorite Places</p>
-                    <a href="/home"><i class="uil uil-arrow-left"></i> Go Back</a>
+                    <a id="backBtn" href="/home"><i class="uil uil-arrow-left"></i><p>Go Back</p></a>
                 </div>
-                <p>Your favorites</p>
+                <p class="muted">Your favorites</p>
 
             </section>
              

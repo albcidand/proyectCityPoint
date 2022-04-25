@@ -50,7 +50,7 @@ main {
     height: 50vh;
     width: clamp(17em, 50vw, 35vw);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     background: rgba(255, 255, 255, 0.3);
@@ -72,7 +72,7 @@ main {
 #loginForm {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     width: 100%;
 }
 
@@ -110,6 +110,10 @@ input:-webkit-autofill:focus {
     flex-direction: column;
     gap: 20px;
     color: var(--whiteColor);
+}
+
+#guestContainer p {
+    padding-bottom: 5px;
 }
 
 #guestBtn {

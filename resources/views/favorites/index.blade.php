@@ -74,6 +74,9 @@
             </section>
              
             <section id="places">
+            @if (!isset($favoritePlaces[0]))
+                    <p id="notification" class="muted">You don't have any favorites yet.<br>Try adding a couple.</p>
+            @else
                 @foreach($favoritePlaces as $favorite)
                             <div class="card">
                                 <button class="fav_btn btn_active" value="{{$favorite -> place_id}}"><i class="uil uil-heart likeHeart fav_active"></i></button>
@@ -86,6 +89,7 @@
                                 <p id="srcMap" class="hidden_info">{{$favorite -> place_map}}</p>
                             </div>
                 @endforeach
+            @endif
             </section>
 
             </main>

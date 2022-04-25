@@ -405,6 +405,16 @@ main {
     display: none;
 }
 
+/* favorites section */
+
+#notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-column: 1/3;
+}
+
 /* ------------------- INFO CARD DISPLAY ------------------- */
 
 #infoCardContainer {

@@ -130,7 +130,7 @@
     display: grid;
     justify-content: center;
     grid-auto-rows: minmax(17em, auto);
-    grid-template-columns: repeat(2, 12em);
+    grid-template-columns: repeat(auto-fit, 11em);
     gap: 10px 10px;
 }
 

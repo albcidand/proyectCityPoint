@@ -324,7 +324,7 @@ main {
 /* CARDS STYLE */
 
 .card {
-    width: 12em;
+    width: 11em;
     display: flex;
     flex-direction: column;
     border-radius: 10px;

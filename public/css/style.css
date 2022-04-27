@@ -30,6 +30,7 @@ header {
     box-shadow: var(--shadowHead);
     background-color: var(--backgroundColor);
     position: fixed;
+    z-index: 100;
 }
 
 #logo {
@@ -89,7 +90,7 @@ main {
     padding-left: 128.5px;
 }
 
-#p_text div:nth-child(1) {
+.icon {
     font-size: 25px;
     color: var(--primaryColor);
     height: 50px;
@@ -141,7 +142,33 @@ main {
 }
 
 #list {
-    background-color: var(--backgroundColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-basis: 50%;
+}
+
+#list>div {
+    width: 40vw;
+    display: flex;
+    gap: 30px;
+}
+
+.l_text {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+#list h2 {
+    font-size: clamp(20px, 2vw, 35px);
+    font-weight: normal;
+    line-height: 1.3;
+}
+
+#list p {
+    color: #8e9097;
 }
 
 .login {
@@ -264,4 +291,126 @@ footer p {
 footer span {
     color: var(--primaryColor);
     font-weight: 600;
+}
+
+
+/* ------------------- RESPONSIVE ------------------- */
+
+@media screen and (max-width: 1200px) {
+    #p_text {
+        padding-left: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #presentation {
+        height: 50vh;
+        align-items: center;
+    }
+
+    #presentation .icon {
+        align-self: center;
+    }
+
+    #p_text {
+        flex-basis: 100%;
+        padding-left: 0;
+        gap: 0;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    #p_text div:nth-child(3) {
+        justify-content: center;
+    }
+
+    #mockup {
+        display: none;
+    }
+
+    #presentation {
+        flex-direction: column;
+    }
+
+    #description {
+        flex-direction: column-reverse;
+    }
+
+    .login {
+        border-radius: 0;
+    }
+
+    .tarjeta {
+        height: 40vh;
+    }
+
+    #list {
+        flex-direction: row;
+        gap: 20px;
+        padding: 30px;
+        text-align: center;
+    }
+
+    #list>div {
+        height: 50%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #list h2 {
+        font-size: 21px;
+    }
+
+    .l_text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #list p {
+        padding: 10px 0 0 0px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #presentation {
+        height: 100vh;
+    }
+
+    #description {
+        height: 200vh;
+    }
+
+    #list {
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-between;
+    }
+
+    #list>div {
+        height: unset;
+        width: unset;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    #nav {
+        gap: 10px;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #list {
+        height: unset;
+    }
+
+    .tarjeta {
+        height: unset;
+    }
 }

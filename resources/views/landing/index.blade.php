@@ -26,7 +26,7 @@
         <main>
             <div id="presentation">
                 <section id="p_text">
-                    <div>
+                    <div class ="icon">
                         <i class="fa-solid fa-map-location-dot"></i>
                     </div>
                     <div>
@@ -50,7 +50,7 @@
                     
                     <div class="tarjeta blue">
                         <h1>City<span>Point</span></h1>
-                        <form id="loginForm" action="" method="post">
+                        <form id="loginForm" >
                             <input id="email" type="email" name="email" placeholder="Email">
                             <input type="password" id="password" name="password" placeholder="Password">
                             <button id="loginBtn">Login</button>
@@ -64,7 +64,45 @@
                 </section>
 
                 <section id="list">
-
+                    <div>
+                        <div class="l_text">
+                            <div class ="icon">
+                                <i class="fa-solid fa-earth-americas"></i>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <h2>Pick Your Destination</h2>
+                            <p>From a selection of cities all around the world</p>
+                        </div>
+                        
+                    </div>
+                    <div>
+                        <div class="l_text">
+                            <div class ="icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <h2>Explore The City</h2>
+                            <p>Search for special places selected <br>by expert local guides</p>
+                        </div>
+                        
+                    </div>
+                    <div>
+                        <div class="l_text">
+                            <div class ="icon">
+                            <i class="fa-solid fa-route"></i>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <h2>Plan Your Own Trip<br>And Experience</h2>
+                            <p>Make a custom list of your favorite places</p>
+                        </div>
+                        
+                    </div>
                 </section>
             </div>
 

@@ -103,7 +103,7 @@
             <section id="title">
 
                 <div>
-                    <p class="sectionTitle"><span class="mark">Secret</span> Places</p>
+                    <p class="filterSectionTitle"><span class="mark">Secret</span> Places</p>
                     <a id="backBtn" href="/home"><i class="uil uil-arrow-left"></i><p>Go Back</p></a>
                 </div>
                 <p class="muted">A selection of secret places from cities all around the world</p>

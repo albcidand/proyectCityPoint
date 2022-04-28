@@ -40,7 +40,7 @@ Route::get('/secret', 'App\Http\Controllers\CategoriesController@showSecret');
 
 /* rutas para el filtro de ciudad de la home */
 
-Route::get('/sevilla', 'App\Http\Controllers\CityController@showSevilla');
+Route::get('/seville', 'App\Http\Controllers\CityController@showSevilla');
 Route::get('/madrid', 'App\Http\Controllers\CityController@showMadrid');
 Route::get('/valencia', 'App\Http\Controllers\CityController@showValencia');
 Route::get('/lisbon', 'App\Http\Controllers\CityController@showLisbon');

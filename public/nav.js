@@ -18,3 +18,7 @@ $('.blur').click(function () {
     $('#mobileNav').toggleClass('active');
     $('body').toggleClass('blurActive');
 })
+
+$('#alert').click(function () {
+
+})

@@ -37,8 +37,9 @@
 /* category filter */
 
 #categories {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(110px, 1fr));
+    gap: 10px;
 }
 
 .categories_btn {
@@ -49,6 +50,11 @@
     transition: all .35s ease;
     text-align: center;
     padding: 3px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    min-width: 110px;
 }
 
 .categories_btn>i {
@@ -70,4 +76,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+
+@media screen and (min-width: 520px) {
+    #categories {
+        grid-template-columns: repeat(4, minmax(110px, 1fr));
+    }
+
 }

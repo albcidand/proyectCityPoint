@@ -71,6 +71,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 1.5px;
 }
 
 #categories a:hover {
@@ -220,7 +221,8 @@
     }
 
     #seeMoreFavBtn {
-        padding-top: 10px;
+        padding-top: 25px;
+        padding-bottom: 30px;
     }
 }
 

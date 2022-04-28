@@ -48,8 +48,6 @@
                 
             </nav>
 
-            <nav id="desktopNav"></nav>
-
             <button id="hamburger">
                 <div class="bar"></div>
             </button>
@@ -62,13 +60,52 @@
 
         <div id="content">
 
-            <main>
+            <nav id="desktopNav">
+                <div id="dsktpNavContainer" class="dsktp">
+                    <a href="/home">
+                    <i class="uil uil-estate"></i>
+                        <h3>Home</h3>
+                    </a>
+    
+                    <a href="#">
+                    <i class="uil uil-user"></i>
+                        <h3>Profile</h3>
+                    </a>
+    
+                    <a href="/favorites">
+                    <i class="uil uil-heart"></i>
+                        <h3>Favorites</h3>
+                    </a>
+
+                    <a href="#">
+                    <i class="uil uil-envelope-check"></i>
+                        <h3>Messages</h3>
+                    </a>
+    
+                    <a href="#">
+                    <i class="uil uil-setting"></i>
+                        <h3>Settings</h3>
+                    </a>
+    
+                    <a href="#">
+                    <i class="uil uil-plus-circle"></i>
+                        <h3>Add Place</h3>
+                    </a>
+
+                    <a href="/">
+                    <i class="uil uil-signout"></i>
+                        <h3>Logout</h3>
+                    </a>
+                </div>
+            </nav>
+
+            <main id="responsive_main">
 
                 <div id="hero_img_valencia"></div>
             <section class="filterTitle">
 
                 <div>
-                    <p class="sectionTitle">Valencia</p>
+                    <p class="filterSectionTitle">Valencia</p>
                     <a id="backBtn" href="/home"><i class="uil uil-arrow-left"></i><p>Go Back</p></a>
                 </div>
                 <p class="muted">Discover places in Valencia</p>
@@ -82,7 +119,7 @@
                 <button class="categories_btn" id="categoriesSecret" value="secret"><i class="fa-solid fa-user-secret"></i> Secret</button>
             </section>
              
-            <section id="places">
+            <section id="places" class="responsive_cards">
                 @foreach($valenciaPlaces as $place)
                             <div class="card">
                                 <button class="fav_btn" value="{{$place -> place_id}}"><i class="uil uil-heart likeHeart"></i></button>

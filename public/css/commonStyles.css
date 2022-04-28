@@ -274,7 +274,12 @@ main {
 .sectionTitle {
     font-size: 1.5rem;
     font-weight: 500;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
+}
+
+.filterSectionTitle {
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 #backBtn {
@@ -400,6 +405,7 @@ main {
     justify-content: center;
     align-items: center;
     box-shadow: var(--btnBoxShadow);
+    cursor: pointer;
 }
 
 .closeCard_btn {
@@ -476,7 +482,7 @@ main {
     position: fixed;
     top: 0;
     z-index: 2000;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(2px);
 }
 
@@ -487,6 +493,7 @@ main {
     flex-direction: column;
     background-color: var(--whiteColor);
     overflow: auto;
+    position: relative;
 }
 
 #infoCard button {
@@ -586,6 +593,10 @@ footer span {
     #places.responsive_cards {
         grid-template-columns: repeat(auto-fit, 11em);
     }
+
+    #infoCard {
+        width: 40em;
+    }
 }
 
 @media screen and (min-width: 685px) {
@@ -617,6 +628,10 @@ footer span {
         display: block;
     }
 
+    #dsktpNavContainer {
+        padding-top: 30px;
+    }
+
     #dsktpNavContainer.dsktp {
         min-height: 649.19px;
     }
@@ -629,10 +644,6 @@ footer span {
         width: 100%;
     }
 
-    .sectionTitle {
-        padding-bottom: 20px;
-    }
-
     #favorites {
         width: 20%;
         box-shadow: var(--boxShadow);
@@ -640,13 +651,8 @@ footer span {
     }
 
     #favorites .sectionTitle {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    #seeMoreFavBtn {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 30px;
+        padding-bottom: 25px;
     }
 
 }

@@ -118,7 +118,7 @@
                 </section>
     
                 <section id="cities">
-                    <a class="city" href="/sevilla"><p>Sevilla</p></a>
+                    <a class="city" href="/seville"><p>Seville</p></a>
                     <a class="city" href="/madrid"><p>Madrid</p></a>
                     <a class="city" href="/valencia"><p>Valencia</p></a>
                     <a class="city" href="/lisbon"><p>Lisbon</p></a>

@@ -49,7 +49,7 @@ $(document).on('click', '.fav_btn', function () {
                         '</div>'
                     );
 
-                    $('.card').eq(4).hide().fadeIn();
+                    $('.card').eq(8).hide().fadeIn();
                 })
 
             }

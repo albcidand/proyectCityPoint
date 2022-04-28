@@ -55,8 +55,8 @@ header {
 
 #hamburger {
     position: relative;
-    width: clamp(2rem, 5vw, 3rem);
-    height: clamp(2rem, 5vw, 3rem);
+    width: 2rem;
+    height: 2rem;
     cursor: pointer;
     background: none;
     border: none;
@@ -196,6 +196,51 @@ body.blurActive {
 
 #desktopNav {
     display: none;
+    width: 20%;
+    margin-top: 68px;
+}
+
+#dsktpNavContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+    transition: all .35s ease;
+    box-shadow: var(--boxShadow);
+    position: relative;
+    border-radius: 10px;
+}
+
+#desktopNav a {
+    color: var(--darkMode);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 3rem;
+    transition: all .35s ease;
+    padding-left: 2rem;
+}
+
+#desktopNav a>i {
+    font-size: 20px;
+    transition: all .35s ease;
+}
+
+#desktopNav a:last-child {
+    position: absolute;
+    bottom: 6rem;
+    width: 100%;
+}
+
+#desktopNav a:hover {
+    background-color: var(--primaryColor);
+    color: var(--whiteColor)
+}
+
+#desktopNav a:hover i {
+    color: var(--whiteColor);
 }
 
 /* ------------------- MAIN CONTENT ------------------- */
@@ -229,6 +274,7 @@ main {
 .sectionTitle {
     font-size: 1.5rem;
     font-weight: 500;
+    padding-bottom: 20px;
 }
 
 #backBtn {
@@ -272,7 +318,7 @@ main {
     display: grid;
     justify-content: center;
     grid-auto-rows: minmax(17em, auto);
-    grid-template-columns: repeat(2, 12em);
+    grid-template-columns: repeat(2, 11em);
     gap: 10px 10px;
 }
 
@@ -415,6 +461,10 @@ main {
     grid-column: 1/3;
 }
 
+.mark {
+    color: var(--primaryColor);
+}
+
 /* ------------------- INFO CARD DISPLAY ------------------- */
 
 #infoCardContainer {
@@ -518,4 +568,85 @@ footer p {
 footer span {
     color: var(--primaryColor);
     font-weight: 600;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+
+@media screen and (max-width: 521px) {
+    #places.responsive_cards {
+        grid-template-columns: repeat(auto-fit, 11em);
+    }
+}
+
+@media screen and (min-width: 521px) {
+    #random #cardContainer {
+        grid-template-columns: repeat(2, 11em);
+    }
+
+    #places.responsive_cards {
+        grid-template-columns: repeat(auto-fit, 11em);
+    }
+}
+
+@media screen and (min-width: 685px) {
+    #random #cardContainer {
+        grid-template-columns: repeat(4, 11em);
+    }
+
+    #places.responsive_cards {
+        grid-template-columns: repeat(auto-fit, 11em);
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    #mobileNav {
+        display: none;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    #content {
+        flex-direction: row;
+        gap: unset;
+        justify-content: unset;
+    }
+
+    #desktopNav {
+        display: block;
+    }
+
+    #dsktpNavContainer.dsktp {
+        min-height: 649.19px;
+    }
+
+    main {
+        width: 60%;
+    }
+
+    #responsive_main {
+        width: 100%;
+    }
+
+    .sectionTitle {
+        padding-bottom: 20px;
+    }
+
+    #favorites {
+        width: 20%;
+        box-shadow: var(--boxShadow);
+        border-radius: 10px;
+    }
+
+    #favorites .sectionTitle {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #seeMoreFavBtn {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
 }

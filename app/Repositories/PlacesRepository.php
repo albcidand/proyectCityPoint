@@ -15,7 +15,7 @@ class PlacesRepository
     }
 
     public function random(){
-        return PlacesModel::all()->random(4);
+        return PlacesModel::all()->random(8);
     }
 
     public function getById($place_id){

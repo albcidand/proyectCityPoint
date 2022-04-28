@@ -35,6 +35,57 @@
                         <h3>Favorites</h3>
                     </a>
 
+                    <a href="#">
+                    <i class="uil uil-envelope-check"></i>
+                        <h3>Messages</h3>
+                    </a>
+    
+                    <a href="#">
+                    <i class="uil uil-setting"></i>
+                        <h3>Settings</h3>
+                    </a>
+    
+                    <a href="#">
+                    <i class="uil uil-plus-circle"></i>
+                        <h3>Add Place</h3>
+                    </a>
+
+                    <a href="/">
+                    <i class="uil uil-signout"></i>
+                        <h3>Logout</h3>
+                    </a>
+                </div>
+                
+            </nav>
+
+            <button id="hamburger">
+                <div class="bar"></div>
+            </button>
+
+            <a href="/home" id="logo">City<span>Point</span></a>
+
+            <img src="/assets/userPlaceholderImg.png" alt="User Pic" id="userPic"> 
+
+        </header>
+        <div id="content">
+            
+            <nav id="desktopNav">
+                <div id="dsktpNavContainer">
+                    <a href="#">
+                    <i class="uil uil-estate"></i>
+                        <h3>Home</h3>
+                    </a>
+    
+                    <a href="#">
+                    <i class="uil uil-user"></i>
+                        <h3>Profile</h3>
+                    </a>
+    
+                    <a href="/favorites">
+                    <i class="uil uil-heart"></i>
+                        <h3>Favorites</h3>
+                    </a>
+
                     <a href="/">
                     <i class="uil uil-envelope-check"></i>
                         <h3>Messages</h3>
@@ -55,30 +106,24 @@
                         <h3>Logout</h3>
                     </a>
                 </div>
-                
             </nav>
-
-            <nav id="desktopNav"></nav>
-
-            <button id="hamburger"> <!-- botón hamburguesa del menu mobile -->
-                <div class="bar"></div>
-            </button>
-
-            <a href="/home" id="logo">City<span>Point</span></a>
-
-            <img src="/assets/userPlaceholderImg.png" alt="User Pic" id="userPic"> 
-
-        </header>
-        <div id="content">
 
             <main>
     
                 <section id="titleHomeContainer">
                     <div id="titleHome">
                         <h2>Discover<br><span>New</span> Places.</h2>
+                        <div id="image"></div>
                     </div>
                 </section>
     
+                <section id="cities">
+                    <a class="city" href="/sevilla"><p>Sevilla</p></a>
+                    <a class="city" href="/madrid"><p>Madrid</p></a>
+                    <a class="city" href="/valencia"><p>Valencia</p></a>
+                    <a class="city" href="/lisbon"><p>Lisbon</p></a>
+                </section>
+
                 <section id="categories">
                     <div class="categoriesBtn">
                         <a href="/monuments"><i class="fa-solid fa-landmark-dome"></i><p>Monument</p></a>
@@ -94,15 +139,8 @@
                     </div>
                 </section>
     
-                <section id="cities">
-                    <a class="city" href="/sevilla"><p>Sevilla</p></a>
-                    <a class="city" href="/madrid"><p>Madrid</p></a>
-                    <a class="city" href="/valencia"><p>Valencia</p></a>
-                    <a class="city" href="/lisbon"><p>Lisbon</p></a>
-                </section>
-    
                 <section id="random">
-                <p class="sectionTitle">Random Places</p>
+                <p class="sectionTitle"><span class="mark">Random</span> Places</p>
                     <div id="cardContainer">
                         @foreach($randomPlaces as $place)
                         
@@ -127,7 +165,7 @@
             </main>
     
             <aside id="favorites">
-                <p class="sectionTitle">Favorite Places</p>
+                <p class="sectionTitle"><span class="mark">Favorite</span> Places</p>
 
                 <div id="cardContainer" class="fav_places">
                     

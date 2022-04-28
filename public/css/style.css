@@ -45,7 +45,12 @@ header {
 #nav {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 20px;
+}
+
+#nav li {
+    display: flex;
 }
 
 #nav li button {
@@ -56,9 +61,13 @@ header {
     border-radius: 5px;
 }
 
-#nav li:nth-child(1) button {
+#nav li:nth-child(1) a {
     background-color: var(--primaryColor);
     color: white;
+    padding: 3px 10px;
+    border: var(--primaryColor) 2px solid;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 /* ------------------- MAIN ------------------- */
@@ -385,7 +394,6 @@ footer span {
     #list {
         flex-direction: column;
         height: 100vh;
-        justify-content: space-between;
     }
 
     #list>div {

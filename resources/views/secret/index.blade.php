@@ -47,8 +47,6 @@
                 
             </nav>
 
-            <nav id="desktopNav"></nav>
-
             <button id="hamburger">
                 <div class="bar"></div>
             </button>
@@ -61,19 +59,58 @@
 
         <div id="content">
 
-            <main>
+            <nav id="desktopNav">
+                <div id="dsktpNavContainer" class="dsktp">
+                    <a href="/home">
+                    <i class="uil uil-estate"></i>
+                        <h3>Home</h3>
+                    </a>
+    
+                    <a href="#">
+                    <i class="uil uil-user"></i>
+                        <h3>Profile</h3>
+                    </a>
+    
+                    <a href="/favorites">
+                    <i class="uil uil-heart"></i>
+                        <h3>Favorites</h3>
+                    </a>
+
+                    <a href="#">
+                    <i class="uil uil-envelope-check"></i>
+                        <h3>Messages</h3>
+                    </a>
+    
+                    <a href="#">
+                    <i class="uil uil-setting"></i>
+                        <h3>Settings</h3>
+                    </a>
+    
+                    <a href="#">
+                    <i class="uil uil-plus-circle"></i>
+                        <h3>Add Place</h3>
+                    </a>
+
+                    <a href="/">
+                    <i class="uil uil-signout"></i>
+                        <h3>Logout</h3>
+                    </a>
+                </div>
+            </nav>
+
+            <main id="responsive_main">
 
             <section id="title">
 
                 <div>
-                    <p class="sectionTitle">Secret Places</p>
+                    <p class="sectionTitle"><span class="mark">Secret</span> Places</p>
                     <a id="backBtn" href="/home"><i class="uil uil-arrow-left"></i><p>Go Back</p></a>
                 </div>
                 <p class="muted">A selection of secret places from cities all around the world</p>
 
             </section>
              
-            <section id="places">
+            <section id="places" class="responsive_cards">
                 @foreach($secret as $secret_place)
                             <div class="card">
                                 <button class="fav_btn" value="{{$secret_place -> place_id}}"><i class="uil uil-heart likeHeart"></i></button>

@@ -18,7 +18,7 @@
         <header>
         <div id="logo">City<span>Point</span></div>
         <ul id="nav">
-            <li><button>Login</button></li>
+            <li><a href="#description">Login</a></li>
             <li><button>Sign Up</button></li>
         </ul>
         </header>

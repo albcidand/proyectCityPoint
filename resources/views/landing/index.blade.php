@@ -18,7 +18,7 @@
         <header>
         <div id="logo">City<span>Point</span></div>
         <ul id="nav">
-            <li><a href="#description">Login</a></li>
+            <li><a href="#login">Login</a></li>
             <li><button>Sign Up</button></li>
         </ul>
         </header>
@@ -46,7 +46,7 @@
             </div>
             
             <div id="description">
-                <section class="login">
+                <section id="login" class="login">
                     
                     <div class="tarjeta blue">
                         <h1>City<span>Point</span></h1>

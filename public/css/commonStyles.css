@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: Poppins;
+    font-family: "Poppins", Arial, sans-serif;
     font-size: var(--fontSize);
     background-color: var(--backgroundColor);
 }
@@ -544,6 +544,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     gap: 30px;
+    height: 50%;
 }
 
 #infoCardData h2 {

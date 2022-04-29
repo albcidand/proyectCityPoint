@@ -55,3 +55,4 @@ Route::get('/madrid_category', 'App\Http\Controllers\CityController@showCategory
 /* ruta para la página de favoritos */
 
 Route::get('/favorites', 'App\Http\Controllers\FavoriteListController@showAllFavorites');
+Route::get('/refreshFavorites', 'App\Http\Controllers\FavoriteListController@deleteFav');

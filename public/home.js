@@ -37,7 +37,7 @@ $(document).on('click', '.fav_btn', function () {
                 $('.fav_places').html('');
                 response.forEach(element => {
                     $('.fav_places').append(
-                        '<div class="card">' +
+                        '<div class="card" id="expand">' +
                         '<button class="fav_btn btn_active" value="' + element.place_id + '"><i class="uil uil-heart likeHeart fav_active"></i></button>' +
                         '<img src="' + element.place_img + '" alt="">' +
                         '<div>' +

@@ -53,7 +53,7 @@ $(document).on('click', '#btn_confirm_alert', function () {
     $.ajax({
         method: 'GET',
         dataType: 'json',
-        url: url_global + '/delete_fav',
+        url: url_global + '/refreshFavorites',
         data: {
             '_token': token,
             'place_id': $('#btn_confirm_alert').val()
@@ -67,8 +67,9 @@ $(document).on('click', '#btn_confirm_alert', function () {
                 )
             } else {
                 response.forEach(element => {
+                    console.log(element.place_description);
                     $('#places').append(
-                        '<div class="card">' +
+                        '<div class="card" id="expand">' +
                         '<button class="fav_btn btn_active" value="' + element.place_id + '"><i class="uil uil-heart likeHeart fav_active"></i></button>' +
                         '<img src="' + element.place_img + '" alt="">' +
                         '<div>' +

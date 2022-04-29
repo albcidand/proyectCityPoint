@@ -105,7 +105,7 @@
             <section class="filterTitle">
 
                 <div>
-                    <p class="filterSectionTitle">Valencia</p>
+                    <p class="filterSectionTitle"><span class="mark">Valencia</span></p>
                     <a id="backBtn" href="/home"><i class="uil uil-arrow-left"></i><p>Go Back</p></a>
                 </div>
                 <p class="muted">Discover places in Valencia</p>

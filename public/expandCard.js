@@ -19,32 +19,67 @@ $(document).on('click', '.card', function (e) {
         /* si se cumple la condición significa que el usuario ha hecho click en la tarjeta para verla ampliada, por lo que se crea el elemento
         que va a recoger la información del html utilizando "this" para referirse a la tarjeta que se ha clickado */
 
-        $('#content').append(
-            '<div id="infoCardContainer">' +
+        if ($(e.target).is("#expand *")) {
+            /* pongo un segundo condicional para solucionar un problema con la forma de recoger los datos 
+                   para mostrarlos una vez que se han actualizado las tarjetas mediante ajax */
 
-            '<div id="infoCard">' +
-            '<button class="fav_btn" value="' + $(this).children('button').val() + '"><i class="uil uil-heart likeHeart"></i></button>' +
-            '<button class="closeCard_btn"><i class="uil uil-arrow-left"></i></button>' +
-            '<div id="infoCardImg"><img src="' + $(this).children('img').attr('src') + '" alt=""></div>' +
-            '<div id="infoCardData">' +
-            '<div id="infoCardTitle">' +
-            '<h2>' + $(this).children('div').children('h3').text() + '</h2>' +
+            $('#content').append(
+                '<div id="infoCardContainer">' +
+
+                '<div id="infoCard">' +
+                '<button class="fav_btn" value="' + $(this).children('button').val() + '"><i class="uil uil-heart likeHeart"></i></button>' +
+                '<button class="closeCard_btn"><i class="uil uil-arrow-left"></i></button>' +
+                '<div id="infoCardImg"><img src="' + $(this).children('img').attr('src') + '" alt=""></div>' +
+                '<div id="infoCardData">' +
+                '<div id="infoCardTitle">' +
+                '<h2>' + $(this).children('div').children('h3').text() + '</h2>' +
 
 
-            '<p><i class="uil uil-map-marker"></i>' + $(this).children('div').children('p:nth-child(2)').text() + '</p>' +
-            '</div>' +
-            '<div id="infoCardDescription">' +
-            '<h4>About</h4>' +
-            '<p>' + $(this).children('div').children('p:nth-child(3)').text() + '</p>' +
-            '</div>' +
-            '<div id="infoCardMap">' +
-            '<iframe src="' + $(this).children('#srcMap').text() + '" width="100%" height="100" style="border:0;"  referrerpolicy="no-referrer-when-downgrade"></iframe>' +
-            '</div>' +
-            '</div>' +
-            '</div>' +
+                '<p><i class="uil uil-map-marker"></i>' + $(this).children('div').children('p:nth-child(2)').text() + '</p>' +
+                '</div>' +
+                '<div id="infoCardDescription">' +
+                '<h4>About</h4>' +
+                '<p>' + $(this).children('div').children('p:nth-child(3)').html() + '</p>' + /* para que mantenga el formato de texto después de usar ajax necesito coger el innerHTML */
+                '</div>' +
+                '<div id="infoCardMap">' +
+                '<iframe src="' + $(this).children('#srcMap').text() + '" width="100%" height="100" style="border:0;"  referrerpolicy="no-referrer-when-downgrade"></iframe>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
 
-            '</div>'
-        )
+                '</div>'
+            )
+
+        } else {
+
+            $('#content').append(
+                '<div id="infoCardContainer">' +
+
+                '<div id="infoCard">' +
+                '<button class="fav_btn" value="' + $(this).children('button').val() + '"><i class="uil uil-heart likeHeart"></i></button>' +
+                '<button class="closeCard_btn"><i class="uil uil-arrow-left"></i></button>' +
+                '<div id="infoCardImg"><img src="' + $(this).children('img').attr('src') + '" alt=""></div>' +
+                '<div id="infoCardData">' +
+                '<div id="infoCardTitle">' +
+                '<h2>' + $(this).children('div').children('h3').text() + '</h2>' +
+
+
+                '<p><i class="uil uil-map-marker"></i>' + $(this).children('div').children('p:nth-child(2)').text() + '</p>' +
+                '</div>' +
+                '<div id="infoCardDescription">' +
+                '<h4>About</h4>' +
+                '<p>' + $(this).children('div').children('p:nth-child(3)').text() + '</p>' + /* antes de hacer ajax necesito coger solo el texto */
+                '</div>' +
+                '<div id="infoCardMap">' +
+                '<iframe src="' + $(this).children('#srcMap').text() + '" width="100%" height="100" style="border:0;"  referrerpolicy="no-referrer-when-downgrade"></iframe>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+
+                '</div>'
+            )
+        }
+
 
         $('#infoCardContainer').hide().fadeIn(300); /* animación para que el elemento aparezca de forma más fluida */
         $('body').css('overflow', 'hidden') /* elimino el scroll de la pantalla principal */

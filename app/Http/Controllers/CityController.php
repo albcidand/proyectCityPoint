@@ -23,7 +23,7 @@ class CityController extends Controller
 
     /* show sevilla places */
     public function showSevilla() {
-        $sevillaPlaces = DB::select('SELECT * FROM places WHERE place_city LIKE "%sevilla%"');
+        $sevillaPlaces = DB::select('SELECT * FROM places WHERE place_city LIKE "%seville%"');
 
         return view('sevilla.index', ['sevillaPlaces' => $sevillaPlaces]);
     }
@@ -45,7 +45,7 @@ class CityController extends Controller
 
     public function showCategorySevilla(Request $request) {
     
-        $category = DB::table('places')->select('places.*')->where('place_city', 'like', '%sevilla%')->where('place_category', 'like', '%'.$request->category.'%')->get();
+        $category = DB::table('places')->select('places.*')->where('place_city', 'like', '%seville%')->where('place_category', 'like', '%'.$request->category.'%')->get();
 
         return $category;
     }

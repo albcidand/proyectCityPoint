@@ -86,7 +86,7 @@
                         <h3>Favorites</h3>
                     </a>
 
-                    <a href="/">
+                    <a href="#">
                     <i class="uil uil-envelope-check"></i>
                         <h3>Messages</h3>
                     </a>
@@ -96,7 +96,7 @@
                         <h3>Settings</h3>
                     </a>
     
-                    <a href="/">
+                    <a href="#">
                     <i class="uil uil-plus-circle"></i>
                         <h3>Add Place</h3>
                     </a>

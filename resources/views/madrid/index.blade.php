@@ -36,9 +36,24 @@
                     </a>
     
                     <a href="#">
+                    <i class="uil uil-envelope-check"></i>
+                        <h3>Messages</h3>
+                    </a>
+    
+                    <a href="#">
                     <i class="uil uil-setting"></i>
                         <h3>Settings</h3>
                     </a>
+    
+                    <a href="#">
+                    <i class="uil uil-plus-circle"></i>
+                        <h3>Add Place</h3>
+                    </a>
+
+                    <div class="themeToggler">
+                        <span class="light themeActive"><i class="uil uil-sun"></i></span>
+                        <span class="dark"><i class="uil uil-moon"></i></span>
+                    </div>
     
                     <a href="/">
                     <i class="uil uil-signout"></i>
@@ -91,6 +106,11 @@
                     <i class="uil uil-plus-circle"></i>
                         <h3>Add Place</h3>
                     </a>
+
+                    <div class="themeToggler">
+                        <span class="light themeActive"><i class="uil uil-sun"></i></span>
+                        <span class="dark"><i class="uil uil-moon"></i></span>
+                    </div>
 
                     <a href="/">
                     <i class="uil uil-signout"></i>

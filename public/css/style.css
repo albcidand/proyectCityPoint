@@ -11,12 +11,18 @@
     --shadowHead: 3px 3px 10px -3px #00000015;
     --boxShadow: 0.3em 0.3em 0.7em #00000015;
     --btnBoxShadow: 1px -1px 15px #14141444;
+    --landingBgColor: #E7EAF3;
+    --landingSecondaryTextColor: #8e9097;
+    --alertBg: rgba(255, 255, 255, 0.3);
+    --infoCardBg: rgba(0, 0, 0, 0.7);
+    --bannerImgBgColor: #eaedf7;
 }
 
 body {
     font-family: "Poppins", Arial, sans-serif;
     font-size: var(--fontSize);
-    background-color: #E7EAF3;
+    background-color: var(--landingBgColor);
+    color: var(--darkMode);
 }
 
 /* ------------------- HEADER ------------------- */
@@ -63,7 +69,7 @@ header {
 
 #nav li:nth-child(1) a {
     background-color: var(--primaryColor);
-    color: white;
+    color: var(--whiteColor);
     padding: 3px 10px;
     border: var(--primaryColor) 2px solid;
     border-radius: 5px;
@@ -88,7 +94,7 @@ main {
 
 #p_text {
     flex-basis: 50%;
-    background-color: #E7EAF3;
+    background-color: var(--landingBgColor);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,7 +126,7 @@ main {
 }
 
 #p_text p {
-    color: #8e9097;
+    color: var(--landingSecondaryTextColor);
     padding-top: 20px;
 }
 
@@ -177,7 +183,7 @@ main {
 }
 
 #list p {
-    color: #8e9097;
+    color: var(--landingSecondaryTextColor);
 }
 
 .login {
@@ -230,7 +236,7 @@ main {
 
 .tarjeta input {
     border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid var(--whiteColor);
     background: none;
     outline: none;
     color: var(--whiteColor);

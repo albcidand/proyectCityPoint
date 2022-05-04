@@ -50,6 +50,11 @@
                         <h3>Add Place</h3>
                     </a>
 
+                    <div class="themeToggler">
+                        <span class="light themeActive"><i class="uil uil-sun"></i></span>
+                        <span class="dark"><i class="uil uil-moon"></i></span>
+                    </div>
+
                     <a href="/">
                     <i class="uil uil-signout"></i>
                         <h3>Logout</h3>
@@ -100,6 +105,11 @@
                     <i class="uil uil-plus-circle"></i>
                         <h3>Add Place</h3>
                     </a>
+
+                    <div class="themeToggler">
+                        <span class="light themeActive"><i class="uil uil-sun"></i></span>
+                        <span class="dark"><i class="uil uil-moon"></i></span>
+                    </div>
 
                     <a href="/">
                     <i class="uil uil-signout"></i>

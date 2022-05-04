@@ -13,7 +13,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    background-color: #eaedf7;
+    background-color: var(--bannerImgBgColor);
     border-radius: 10px;
 }
 
@@ -75,7 +75,7 @@
 }
 
 #categories a:hover {
-    color: var(--whiteColor);
+    color: var(--navColor);
     background-color: var(--primaryColor);
 }
 
@@ -126,7 +126,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    color: var(--whiteColor);
+    color: var(--navColor);
 }
 
 .city p {
@@ -180,7 +180,7 @@
 }
 
 #seeMoreFavBtn a:hover {
-    color: var(--whiteColor);
+    color: var(--navColor);
     background-color: var(--primaryColor);
 }
 

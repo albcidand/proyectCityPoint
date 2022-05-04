@@ -11,12 +11,37 @@
     --boxShadow: 0 0.9em 0.9em #00000015;
     --shadowHead: 3px 3px 10px -3px #00000015;
     --btnBoxShadow: 1px -1px 15px #14141444;
+    --alertBg: rgba(0, 0, 0, 0.7);
+    --infoCardBg: rgba(0, 0, 0, 0.7);
+    --landingBgColor: #E7EAF3;
+    --landingSecondaryTextColor: #8e9097;
+    --bannerImgBgColor: #eaedf7;
+    --navColor: #fafcff;
+}
+
+.dark-mode-colors {
+    --primaryColor: #4361ee;
+    --backgroundColor: #202020;
+    --secondaryTextColor: #afb2bc;
+    --fav_color: #ff0054;
+    --whiteColor: #202020;
+    --darkMode: #fafcff;
+    --fontSize: 14px;
+    --boxShadow: 0 0.9em 0.9em #00000075;
+    --shadowHead: 3px 3px 10px -3px #00000075;
+    --btnBoxShadow: 1px -1px 15px #14141444;
+    --alertBg: rgba(0, 0, 0, 0.7);
+    --infoCardBg: rgba(0, 0, 0, 0.7);
+    --landingBgColor: #E7EAF3;
+    --landingSecondaryTextColor: #8e9097;
+    --bannerImgBgColor: #252525;
 }
 
 body {
     font-family: "Poppins", Arial, sans-serif;
     font-size: var(--fontSize);
     background-color: var(--backgroundColor);
+    color: var(--darkMode);
 }
 
 #wrapper {
@@ -185,11 +210,40 @@ body.blurActive {
 
 #mobileNav a:hover {
     background-color: var(--primaryColor);
-    color: var(--whiteColor)
+    color: var(--navColor);
 }
 
 #mobileNav a:hover i {
+    color: var(--navColor);
+}
+
+.themeToggler {
+    font-size: 1.2rem;
+    width: 4rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+.themeToggler span {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.themeActive {
+    background-color: var(--primaryColor);
     color: var(--whiteColor);
+}
+
+.themeActive>i {
+    color: var(--navColor)
 }
 
 /* desktop nav */
@@ -236,11 +290,11 @@ body.blurActive {
 
 #desktopNav a:hover {
     background-color: var(--primaryColor);
-    color: var(--whiteColor)
+    color: var(--navColor);
 }
 
 #desktopNav a:hover i {
-    color: var(--whiteColor);
+    color: var(--navColor);
 }
 
 /* ------------------- MAIN CONTENT ------------------- */
@@ -295,7 +349,7 @@ main {
 }
 
 #backBtn:hover {
-    color: var(--whiteColor);
+    color: var(--navColor);
     background-color: var(--primaryColor);
 }
 
@@ -312,7 +366,7 @@ main {
 #backBtn:hover i:before {
     transform: translateX(-3px);
     transition: all .3s ease;
-    color: var(--whiteColor);
+    color: var(--navColor);
 }
 
 .muted {
@@ -338,7 +392,7 @@ main {
     position: fixed;
     top: 0;
     z-index: 2000;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: var(--alertBg);
     backdrop-filter: blur(2px);
 }
 
@@ -368,7 +422,7 @@ main {
 }
 
 #alert>div>div>button:hover {
-    color: var(--whiteColor);
+    color: var(--navColor);
     background-color: var(--primaryColor);
 }
 
@@ -394,7 +448,7 @@ main {
 .fav_btn,
 .closeCard_btn {
     border: none;
-    background-color: var(--backgroundColor);
+    background-color: var(--navColor);
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -434,7 +488,7 @@ main {
 }
 
 .fav_active {
-    color: var(--backgroundColor);
+    color: var(--navColor);
 }
 
 .btn_active {
@@ -482,7 +536,7 @@ main {
     position: fixed;
     top: 0;
     z-index: 2000;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--infoCardBg);
     backdrop-filter: blur(2px);
 }
 

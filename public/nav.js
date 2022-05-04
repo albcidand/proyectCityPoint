@@ -19,6 +19,30 @@ $('.blur').click(function () {
     $('body').toggleClass('blurActive');
 })
 
-$('#alert').click(function () {
+$(document).ready(function () {
+    if (sessionStorage.getItem('themeActive')) {
 
+        $('.light').removeClass('themeActive');
+        $('.dark').addClass('themeActive');
+
+        $('body').addClass('dark-mode-colors');
+    }
+
+    $('.themeToggler').click(function () {
+        if (sessionStorage.getItem('themeActive')) {
+
+            $('.light').toggleClass('themeActive');
+            $('.dark').toggleClass('themeActive');
+            $('body').toggleClass('dark-mode-colors');
+            sessionStorage.removeItem('themeActive')
+
+        } else {
+
+            $('.light').toggleClass('themeActive');
+            $('.dark').toggleClass('themeActive');
+            $('body').toggleClass('dark-mode-colors');
+            sessionStorage.setItem('themeActive', true)
+
+        }
+    })
 })

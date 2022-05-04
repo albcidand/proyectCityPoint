@@ -62,7 +62,7 @@
 }
 
 .categories_btn:hover {
-    color: var(--whiteColor);
+    color: var(--navColor);
     background-color: var(--primaryColor);
 }
 

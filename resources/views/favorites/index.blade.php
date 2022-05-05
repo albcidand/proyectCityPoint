@@ -131,22 +131,33 @@
             </section>
              
             <section id="places" class="responsive_cards">
-            @if (!isset($favoritePlaces[0]))
+
+                <!-- comprobamos si la respuesta que recibimos del back (FavoriteListController.php) contiene algún lugar o si por el contrario está vacía -->
+
+                @if (!isset($favoritePlaces[0]))
+
+                    <!-- si está vacía mostramos una notificación que haga de placeholder -->
+
                     <p id="notification" class="muted">You don't have any favorites yet.<br>Try adding a couple.</p>
-            @else
-                @foreach($favoritePlaces as $favorite)
-                            <div class="card">
-                                <button class="fav_btn btn_active" value="{{$favorite -> place_id}}"><i class="uil uil-heart likeHeart fav_active"></i></button>
-                                <img src="{{$favorite -> place_img}}" alt="">
-                                <div>
-                                    <h3>{{$favorite -> place_title}}</h3>
-                                    <p><i class="uil uil-map-marker"></i><a href="{{$favorite -> place_location}}" target="_BLANK">{{$favorite -> place_city}}</a></p>
-                                    <p class="hidden_info">{{$favorite -> place_description}}</p>
+
+                @else
+
+                    <!-- si no está vacía recorremos los datos y los mostramos -->
+
+                    @foreach($favoritePlaces as $favorite)
+                                <div class="card">
+                                    <button class="fav_btn btn_active" value="{{$favorite -> place_id}}"><i class="uil uil-heart likeHeart fav_active"></i></button>
+                                    <img src="{{$favorite -> place_img}}" alt="">
+                                    <div>
+                                        <h3>{{$favorite -> place_title}}</h3>
+                                        <p><i class="uil uil-map-marker"></i><a href="{{$favorite -> place_location}}" target="_BLANK">{{$favorite -> place_city}}</a></p>
+                                        <p class="hidden_info">{{$favorite -> place_description}}</p>
+                                    </div>
+                                    <p id="srcMap" class="hidden_info">{{$favorite -> place_map}}</p>
                                 </div>
-                                <p id="srcMap" class="hidden_info">{{$favorite -> place_map}}</p>
-                            </div>
-                @endforeach
-            @endif
+                    @endforeach
+
+                @endif
             </section>
 
             </main>
@@ -162,8 +173,8 @@
     <script src="userFavorites.js"></script>
     <script src="nav.js"></script>
     <script>
-        var url_global = '{{url("/")}}';
-        var token = '{{csrf_token()}}';
+        var url_global = '{{url("/")}}'; /* la variable url_global contiene la url base de la vista */
+        var token = '{{csrf_token()}}'; /* la variable token contiene el csrf_token necesario para poder hacer las peticiones ajax */
     </script>
 </body>
 </html>

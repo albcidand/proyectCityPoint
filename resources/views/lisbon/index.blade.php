@@ -141,8 +141,11 @@
              
             <section id="places" class="responsive_cards">
                 @foreach($lisbonPlaces as $place)
+
+                <!-- recibimos los datos del back (CityController.php) y usamos un bucle forEach para recorrerlos, de esta forma por cada uno de los lugares creamos un elemento "card" que mostrará en pantalla los datos del lugar -->
+
                             <div class="card">
-                                <button class="fav_btn" value="{{$place -> place_id}}"><i class="uil uil-heart likeHeart"></i></button>
+                                <button class="fav_btn" value="{{$place -> place_id}}"><i class="uil uil-heart likeHeart"></i></button><!-- pasamos la id del lugar al value del botón de favoritos, de esta forma podemos usarlo para identificar el lugar cuando se hace click sobre el botón -->
                                 <img src="{{$place -> place_img}}" alt="">
                                 <div>
                                     <h3>{{$place -> place_title}}</h3>
@@ -168,8 +171,8 @@
     <script src="expandCard.js"></script>
     <script src="nav.js"></script>
     <script>
-        var url_global = '{{url("/")}}';
-        var token = '{{csrf_token()}}';
+        var url_global = '{{url("/")}}'; /* la variable url_global contiene la url base de la vista */
+        var token = '{{csrf_token()}}'; /* la variable token contiene el csrf_token necesario para poder hacer las peticiones ajax */
     </script>
     
 </body>

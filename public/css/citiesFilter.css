@@ -1,7 +1,7 @@
 #hero_img_sevilla {
     width: 100%;
     height: 30em;
-    background-image: url(/assets/sevilla.jpg);
+    background-image: url(/assets/sevilla.webp);
     background-size: cover;
     background-position: center;
     margin-top: 20px;
@@ -10,7 +10,7 @@
 #hero_img_madrid {
     width: 100%;
     height: 30em;
-    background-image: url(/assets/madrid.jpg);
+    background-image: url(/assets/madrid.webp);
     background-size: cover;
     background-position: center;
     margin-top: 20px;
@@ -19,7 +19,7 @@
 #hero_img_valencia {
     width: 100%;
     height: 30em;
-    background-image: url(/assets/valencia.jpg);
+    background-image: url(/assets/valencia.webp);
     background-size: cover;
     background-position: left center;
     margin-top: 20px;
@@ -28,7 +28,7 @@
 #hero_img_lisbon {
     width: 100%;
     height: 30em;
-    background-image: url(/assets/lisboa.jpg);
+    background-image: url(/assets/lisboa.webp);
     background-size: cover;
     background-position: center;
     margin-top: 20px;

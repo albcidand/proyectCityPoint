@@ -1,4 +1,4 @@
-/* esta función da funcionalidad al menu de móvil (muestra el menú) */
+/* esta función da funcionalidad al menu de móvil (muestra u oculta el menú al hacer click en el botón hamburguesa) */
 
 $('#hamburger').click(function () {
     $('#hamburger').toggleClass('active'); /* animación del botón hamburguesa */
@@ -7,7 +7,7 @@ $('#hamburger').click(function () {
     $('body').toggleClass('blurActive'); /* elimina el overflow del body */
 });
 
-/* esta función da funcionalidad al menu de móvil (cierra el menú) */
+/* esta función da funcionalidad al menu de móvil (cierra el menú al hacer click en cualquiera de los links) */
 
 $('#mobileNav a').click(function () {
     $('#hamburger').toggleClass('active'); /* animación */

@@ -97,23 +97,23 @@
 }
 
 .city:nth-child(1) {
-    background-image: url(/assets/sevilla.jpg);
+    background-image: url(/assets/sevilla.webp);
     background-size: cover;
 }
 
 .city:nth-child(2) {
-    background-image: url(/assets/madrid.jpg);
+    background-image: url(/assets/madrid.webp);
     background-size: cover;
 }
 
 .city:nth-child(3) {
-    background-image: url(/assets/valencia.jpg);
+    background-image: url(/assets/valencia.webp);
     background-position: center;
     background-size: cover;
 }
 
 .city:nth-child(4) {
-    background-image: url(/assets/lisboa.jpg);
+    background-image: url(/assets/lisboa.webp);
     background-size: cover;
 }
 

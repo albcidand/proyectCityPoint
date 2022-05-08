@@ -1,35 +1,82 @@
-body {
-    background-color: var(--backgroundColor);
-}
-
 /* ------------------- MAIN CONTENT------------------- */
 
 
 
 /* MAIN TITLE */
 
-#title {}
+#titleHomeContainer {
+    margin-top: 50px;
+}
+
+#titleHome {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--bannerImgBgColor);
+    border-radius: 10px;
+}
+
+#titleHome h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    flex-basis: 50%;
+    padding-left: 30px;
+}
+
+#titleHome h2 span {
+    color: var(--primaryColor);
+}
+
+#image {
+    background-image: url(/assets/banner.svg);
+    background-size: contain;
+    background-position: center right;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 10em;
+    flex-basis: 50%;
+    border-radius: 10px;
+}
 
 /* FILTRO CATEGORÍAS */
 
 #categories {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(110px, 1fr));
+    gap: 10px;
+}
+
+.categoriesBtn {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 }
 
 #categories a {
     text-decoration: none;
-    padding: 3px 10px;
-    color: black;
-    background-color: white;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    color: var(--darkMode);
+    background-color: var(--whiteColor);
     border: var(--primaryColor) 2px solid;
     border-radius: 5px;
+    transition: all .35s ease;
+    text-align: center;
+    padding: 3px 5px;
+    min-width: 110px;
 }
 
-#categories button {
-    padding: 0;
-    border: none;
+#categories a>i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1.5px;
+}
+
+#categories a:hover {
+    color: var(--navColor);
+    background-color: var(--primaryColor);
 }
 
 /* FILTRO CIUDADES */
@@ -43,6 +90,10 @@ body {
 
 #cities::-webkit-scrollbar {
     display: none;
+}
+
+.city {
+    background-position: bottom;
 }
 
 .city:nth-child(1) {
@@ -75,7 +126,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    color: white;
+    color: var(--navColor);
 }
 
 .city p {
@@ -85,30 +136,30 @@ body {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 300;
     padding-top: 20px;
 }
 
 #random {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 5px;
 }
 
 #cardContainer {
     display: grid;
     justify-content: center;
-    grid-auto-rows: minmax(20em, auto);
-    grid-template-columns: repeat(2, 12em);
+    grid-auto-rows: minmax(17em, auto);
+    grid-template-columns: repeat(auto-fit, 11em);
     gap: 10px 10px;
 }
 
 /* ------------------- ASIDE CONTENT------------------- */
 
-aside {
+#favorites {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 5px;
     margin: 0px 20px 0 20px;
 }
 
@@ -116,9 +167,75 @@ aside {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 25px;
 }
 
 #seeMoreFavBtn a {
     text-decoration: none;
     padding: 3px 10px;
+    color: var(--darkMode);
+    background-color: var(--whiteColor);
+    border: var(--primaryColor) 2px solid;
+    border-radius: 5px;
+}
+
+#seeMoreFavBtn a:hover {
+    color: var(--navColor);
+    background-color: var(--primaryColor);
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+
+@media screen and (max-width: 600px) {
+    #titleHome h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 520px) {
+    #categories {
+        grid-template-columns: repeat(4, minmax(110px, 1fr));
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .city {
+        min-width: 35%;
+    }
+
+    #cities a {
+        background-position: bottom right;
+    }
+
+    #cities a:nth-child(3) {
+        background-position: center;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    #favorites {
+        margin: 68px 0 0 0;
+        justify-content: start;
+        align-items: center;
+    }
+
+    #seeMoreFavBtn {
+        padding-top: 25px;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .city {
+        min-width: 20%;
+    }
+
+    #cities a {
+        background-position: center right;
+    }
+
+    #cities a:nth-child(3) {
+        background-position: center;
+    }
 }

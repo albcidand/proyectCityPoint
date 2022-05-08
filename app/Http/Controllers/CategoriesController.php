@@ -3,16 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use DB; /* usamos la base de datos */
 
 class CategoriesController extends Controller
 {
+
+    /* estas funciones dan la funcionalidad de filtro a los botones de categoría en la vista home y devuelven la vista correspondiente */
+
     /* monuments filter */
 
     public function showMonuments () {
-        $monuments = DB::select('SELECT * FROM places WHERE place_category LIKE "%Monument%"');
 
-        return view('monuments.index', ['monuments' => $monuments]);
+        $monuments = DB::select('SELECT * FROM places WHERE place_category LIKE "%Monument%"'); /* seleccionamos los lugares de la tabla places en los que la columna place_category contiene la palabra Monument y los guardamos en la variable */
+
+        return view('monuments.index', ['monuments' => $monuments]); /* devolvemos la vista monuments pasándole los datos con la variable $monuments */
     }
 
     /* nature filter */

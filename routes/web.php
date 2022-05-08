@@ -40,7 +40,7 @@ Route::get('/secret', 'App\Http\Controllers\CategoriesController@showSecret');
 
 /* rutas para el filtro de ciudad de la home */
 
-Route::get('/sevilla', 'App\Http\Controllers\CityController@showSevilla');
+Route::get('/seville', 'App\Http\Controllers\CityController@showSevilla');
 Route::get('/madrid', 'App\Http\Controllers\CityController@showMadrid');
 Route::get('/valencia', 'App\Http\Controllers\CityController@showValencia');
 Route::get('/lisbon', 'App\Http\Controllers\CityController@showLisbon');
@@ -55,3 +55,4 @@ Route::get('/madrid_category', 'App\Http\Controllers\CityController@showCategory
 /* ruta para la página de favoritos */
 
 Route::get('/favorites', 'App\Http\Controllers\FavoriteListController@showAllFavorites');
+Route::get('/refreshFavorites', 'App\Http\Controllers\FavoriteListController@deleteFav');

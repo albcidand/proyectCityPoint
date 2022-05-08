@@ -1,36 +1,88 @@
 #hero_img_sevilla {
     width: 100%;
-    height: 20em;
-    background-image: url(/assets/sevilla.jpg);
+    height: 30em;
+    background-image: url(/assets/sevilla.webp);
     background-size: cover;
     background-position: center;
+    margin-top: 20px;
 }
 
 #hero_img_madrid {
     width: 100%;
-    height: 20em;
-    background-image: url(/assets/madrid.jpg);
+    height: 30em;
+    background-image: url(/assets/madrid.webp);
     background-size: cover;
     background-position: center;
+    margin-top: 20px;
 }
 
 #hero_img_valencia {
     width: 100%;
-    height: 20em;
-    background-image: url(/assets/valencia.jpg);
+    height: 30em;
+    background-image: url(/assets/valencia.webp);
     background-size: cover;
-    background-position: center;
+    background-position: left center;
+    margin-top: 20px;
 }
 
 #hero_img_lisbon {
     width: 100%;
-    height: 20em;
-    background-image: url(/assets/lisboa.jpg);
+    height: 30em;
+    background-image: url(/assets/lisboa.webp);
     background-size: cover;
     background-position: center;
+    margin-top: 20px;
 }
 
+/* category filter */
+
 #categories {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(110px, 1fr));
+    gap: 10px;
+}
+
+.categories_btn {
+    color: var(--darkMode);
+    background-color: var(--whiteColor);
+    border: var(--primaryColor) 2px solid;
+    border-radius: 5px;
+    transition: all .35s ease;
+    text-align: center;
+    padding: 3px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    min-width: 110px;
+}
+
+.categories_btn>i {
+    padding-right: 1.5px;
+}
+
+.categories_btn:hover {
+    color: var(--navColor);
+    background-color: var(--primaryColor);
+}
+
+.filterTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filterTitle div {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+
+@media screen and (min-width: 520px) {
+    #categories {
+        grid-template-columns: repeat(4, minmax(110px, 1fr));
+    }
+
 }
